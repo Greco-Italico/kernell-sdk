@@ -34,6 +34,7 @@ FORBIDDEN_NAMES: frozenset[str] = frozenset({
     "eval",
     "exec",
     "compile",
+    "__builtins__",
     # I/O del sistema
     "open",
     "input",
@@ -347,7 +348,9 @@ def validate_code(source: str, filename: str = "<sandbox>") -> ValidationResult:
 # Excepción pública
 # ---------------------------------------------------------------------------
 
-class SandboxViolation(Exception):
+from .errors import SandboxViolation as BaseSandboxViolation
+
+class SandboxViolation(BaseSandboxViolation):
     """Lanzada cuando validate_code() detecta código prohibido."""
 
     def __init__(self, result: ValidationResult) -> None:

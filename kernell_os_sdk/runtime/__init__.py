@@ -5,6 +5,14 @@ from .subprocess_runtime import SubprocessRuntime
 from .docker_runtime import DockerRuntime
 from .firecracker_runtime import FirecrackerRuntime
 from .hybrid_runtime import HybridRuntime, ExecutionMode, HybridRuntimeConfig
+from .execution_manager import (
+    ExecutionManager,
+    DefaultCostEstimator,
+    InMemoryLedger,
+    BudgetExceededError,
+    PreAuthorizationError,
+    input_adjustment_micro,
+)
 
 __all__ = [
     "BaseRuntime",
@@ -18,5 +26,11 @@ __all__ = [
     "FirecrackerRuntime",
     "HybridRuntime",
     "ExecutionMode",
-    "HybridRuntimeConfig"
+    "HybridRuntimeConfig",
+    "ExecutionManager",
+    "DefaultCostEstimator",
+    "InMemoryLedger",
+    "BudgetExceededError",
+    "PreAuthorizationError",
+    "input_adjustment_micro",
 ]

@@ -12,7 +12,7 @@ def notify_update_silently():
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: kernell [init|doctor|demo|cloud|dashboard|upgrade]")
+        print("Usage: kernell [init|doctor|demo|cloud|dashboard|upgrade|run]")
         notify_update_silently()
         return
 
@@ -30,8 +30,10 @@ def main():
         from kernell_os_sdk.cli.dashboard import main as run
     elif cmd == "upgrade":
         from kernell_os_sdk.cli.upgrade import main as run
+    elif cmd == "run":
+        from kernell_os_sdk.cli.run import main as run
     elif cmd == "--help":
-        print("Usage: kernell [init|doctor|demo|cloud|dashboard|upgrade]")
+        print("Usage: kernell [init|doctor|demo|cloud|dashboard|upgrade|run]")
         notify_update_silently()
         return 0
     else:

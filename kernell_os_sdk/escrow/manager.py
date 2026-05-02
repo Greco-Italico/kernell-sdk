@@ -21,16 +21,32 @@ class EscrowState(Enum):
     EXPIRED = "EXPIRED"
 
 # ── H-09 FIX: Micro-KERN integer representation ──
+from decimal import Decimal, ROUND_HALF_UP, InvalidOperation
+
+# ── H-09 FIX: Micro-KERN integer representation ──
 # 1 KERN = 1,000,000 μKERN.  All DB storage uses INTEGER to avoid float rounding.
 _MICRO_KERN = 1_000_000
 
+def validate_amount(amount: Union[float, int, str, Decimal]) -> Decimal:
+    """Fintech-grade strict validation for financial amounts."""
+    try:
+        amt = Decimal(str(amount)) if not isinstance(amount, Decimal) else amount
+    except InvalidOperation:
+        raise ValueError("Invalid numeric value")
+        
+    if not amt.is_finite():
+        raise ValueError("Amount must be finite (cannot be NaN or Inf)")
+    if amt <= 0:
+        raise ValueError("Amount must be positive")
+    return amt
 
 def _kern_to_micro(amount: Union[float, int, str, Decimal]) -> int:
-    """Convert a human-readable KERN amount to μKERN integer."""
-    d = Decimal(str(amount)) if not isinstance(amount, Decimal) else amount
-    micro = (d * _MICRO_KERN).to_integral_value(rounding=ROUND_HALF_UP)
-    return int(micro)
-
+    """Convert a human-readable KERN amount to μKERN integer with strict validation."""
+    amt = validate_amount(amount)
+    micro = int((amt * _MICRO_KERN).to_integral_value(rounding=ROUND_HALF_UP))
+    if micro <= 0:
+        raise ValueError("Invalid micro amount (underflow after rounding)")
+    return micro
 
 def _micro_to_kern(micro: int) -> Decimal:
     """Convert μKERN integer back to human-readable KERN Decimal."""
@@ -167,10 +183,11 @@ class EscrowManager:
     - Strict state transitions (fail-close)
     """
     
-    def __init__(self, db_path: str = "/var/lib/kernell/escrow.sqlite3", actor_keys: Optional[dict[str, str]] = None):
+    def __init__(self, db_path: str = "/var/lib/kernell/escrow.sqlite3", actor_keys: Optional[dict[str, str]] = None, ledger=None):
         self._conn = _ensure_db(db_path)
         # actor_id -> public_key_hex (Ed25519, 32 bytes -> 64 hex chars)
         self._actor_keys = actor_keys or {}
+        self.ledger = ledger
 
     def register_actor_key(self, actor_id: str, public_key_hex: str) -> None:
         if not isinstance(public_key_hex, str) or len(public_key_hex) != 64:
@@ -282,6 +299,8 @@ class EscrowManager:
         }
         self._require_sig(actor_id, intent, signature_hex)
 
+        amount_micro = _kern_to_micro(c.amount_kern)
+
         # C-07 FIX: Atomic state transition with BEGIN IMMEDIATE to prevent TOCTOU
         self._conn.execute("BEGIN IMMEDIATE")
         try:
@@ -292,6 +311,21 @@ class EscrowManager:
             if rows == 0:
                 self._conn.execute("ROLLBACK")
                 raise InvalidTransition("Concurrent state change detected (TOCTOU)")
+                
+            if self.ledger:
+                from core.audit.double_entry_ledger import JournalLine
+                self.ledger.create_account("system", f"wallet_{c.buyer_id}", "asset")
+                self.ledger.create_account("system", "escrow_locked", "asset")
+                self.ledger.create_journal_entry(
+                    tenant_id="system",
+                    reference_id=f"escrow_fund_{contract_id}",
+                    description=f"Fund escrow {contract_id}",
+                    lines=[
+                        JournalLine(f"wallet_{c.buyer_id}", "credit", amount_micro),
+                        JournalLine("escrow_locked", "debit", amount_micro)
+                    ]
+                )
+                
             self._append_event(contract_id, actor_id, "FUND", expected_prev_state.value, nonce, intent, signature_hex)
             self._conn.execute("COMMIT")
         except Exception:
@@ -362,6 +396,8 @@ class EscrowManager:
             "ts": _now(),
         }
         self._require_sig(actor_id, intent, signature_hex)
+        
+        amount_micro = _kern_to_micro(c.amount_kern)
 
         self._conn.execute("BEGIN IMMEDIATE")
         try:
@@ -372,6 +408,21 @@ class EscrowManager:
             if rows == 0:
                 self._conn.execute("ROLLBACK")
                 raise InvalidTransition("Concurrent state change detected (TOCTOU)")
+                
+            if self.ledger:
+                from core.audit.double_entry_ledger import JournalLine
+                self.ledger.create_account("system", f"wallet_{c.seller_id}", "asset")
+                self.ledger.create_account("system", "escrow_locked", "asset")
+                self.ledger.create_journal_entry(
+                    tenant_id="system",
+                    reference_id=f"escrow_release_{contract_id}",
+                    description=f"Release escrow {contract_id} to vendor",
+                    lines=[
+                        JournalLine("escrow_locked", "credit", amount_micro),
+                        JournalLine(f"wallet_{c.seller_id}", "debit", amount_micro)
+                    ]
+                )
+                
             self._append_event(contract_id, actor_id, "RELEASE", expected_prev_state.value, nonce, intent, signature_hex)
             self._conn.execute("COMMIT")
         except Exception:

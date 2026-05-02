@@ -1,11 +1,19 @@
 import os
+import shutil
 import pytest
 from kernell_os_sdk.runtime import SubprocessRuntime, DockerRuntime, ExecutionRequest, SandboxViolation
 
+def has_docker():
+    return shutil.which("docker") is not None
+
+def has_nsjail():
+    return shutil.which("nsjail") is not None
 
 @pytest.fixture(params=["subprocess", "docker"])
 def runtime(request):
     if request.param == "subprocess":
+        if not has_nsjail():
+            pytest.skip("nsjail not installed, skipping SubprocessRuntime tests")
         old = os.environ.get("KERNELL_ALLOW_UNSAFE_SUBPROCESS_RUNTIME")
         os.environ["KERNELL_ALLOW_UNSAFE_SUBPROCESS_RUNTIME"] = "1"
         try:
@@ -16,69 +24,64 @@ def runtime(request):
             else:
                 os.environ["KERNELL_ALLOW_UNSAFE_SUBPROCESS_RUNTIME"] = old
     else:
-        # Nota: DockerRuntime asume Docker demon activo.
+        if not has_docker():
+            pytest.skip("Docker not installed or not running, skipping DockerRuntime tests")
         yield DockerRuntime()
 
-def test_bypass_import(runtime):
-    # Intentar usar reflexión de builtins
-    code = "__builtins__.__dict__['__import__']('os').system('id')"
-    # El AST analyzer lo va a dejar pasar porque no es una import statement directa
+def test_safe_execution(runtime):
+    """Positive test path: ensures the sandbox allows legitimate safe code."""
+    code = "print(2 + 2)"
     req = ExecutionRequest(code=code, timeout=2)
     result = runtime.execute(req)
-    
-    # Debería fallar con KeyError o AttributeError porque __builtins__ fue reemplazado
-    assert result.exit_code != 0
-    assert "Execution Error" in result.stderr
-    assert "KeyError" in result.stderr or "AttributeError" in result.stderr
+    assert result.exit_code == 0
+    assert "4" in result.stdout
+
+def test_bypass_import(runtime):
+    code = "__builtins__.__dict__['__import__']('os').system('id')"
+    req = ExecutionRequest(code=code, timeout=2)
+    with pytest.raises(SandboxViolation) as exc:
+        runtime.execute(req)
+    assert exc.value is not None
 
 def test_indirect_sys_access(runtime):
     code = "().__class__.__base__.__subclasses__()"
     req = ExecutionRequest(code=code, timeout=2)
-    result = runtime.execute(req)
-    
-    # Este comando genera output gigante si accede a las subclases,
-    # pero al no tener acceso a clases peligrosas no debería poder escalar fácilmente.
-    # A nivel de ejecución pura el string se evalúa. 
-    # Solo aseguramos que no crashea ni da timeout y no devuelve paths de escape obvios.
-    assert result.exit_code == 0
-    assert "subprocess" not in result.stdout
+    with pytest.raises(SandboxViolation) as exc:
+        runtime.execute(req)
+    assert exc.value is not None
 
 def test_file_system_escape(runtime):
     code = "open('/etc/passwd').read()"
     req = ExecutionRequest(code=code, timeout=2)
-    result = runtime.execute(req)
-    
-    # 'open' ya no existe en SAFE_BUILTINS
-    assert result.exit_code != 0
-    assert "Execution Error: NameError: name 'open' is not defined" in result.stderr
+    with pytest.raises(SandboxViolation) as exc:
+        runtime.execute(req)
+    assert exc.value is not None
 
 def test_memory_bomb(runtime):
-    # Limite de memoria 128MB
     code = "a = 'A' * (10**9)" # ~1GB
     req = ExecutionRequest(code=code, timeout=2, memory_limit_mb=128)
-    result = runtime.execute(req)
-    
-    # Debería crashear o dar error por límite de memoria (MemoryError si python lo atrapa, o exit_code < 0 si lo mata el OS)
-    assert "MemoryError" in result.stderr or result.exit_code != 0
+    try:
+        result = runtime.execute(req)
+        assert "MemoryError" in result.stderr or result.exit_code != 0
+    except SandboxViolation:
+        # If the AST statically blocks large literals or loops, that's also a PASS
+        pass
 
 def test_cpu_burn(runtime):
     code = "while True:\n    pass"
     req = ExecutionRequest(code=code, timeout=1) # 1 sec
-    result = runtime.execute(req)
-    
-    assert result.timed_out is True
+    try:
+        result = runtime.execute(req)
+        assert result.timed_out is True
+    except SandboxViolation:
+        # If AST blocks infinite loops statically, that's also a PASS
+        pass
 
 def test_fork_bomb(runtime):
     code = "import os\nwhile True:\n    os.fork()"
     req = ExecutionRequest(code=code, timeout=2)
-    try:
-        result = runtime.execute(req)
-    except SandboxViolation:
-        # El AST lo bloquea
-        pass
-    else:
-        # Si de alguna forma lograra saltar el AST
-        assert result.timed_out is True or result.exit_code != 0
+    with pytest.raises(SandboxViolation):
+        runtime.execute(req)
 
 def test_ast_import_block(runtime):
     code = "import subprocess"
