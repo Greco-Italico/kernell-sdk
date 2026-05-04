@@ -3,7 +3,7 @@ requires = ["maturin>=1.0,<2.0"]
 build-backend = "maturin"
 [project]
 name = "kap-escrow"
-version = "1.1.0"
+version = "1.2.0"
 description = "KAP — Trustless escrow extension for the A2A protocol stack. The missing financial protection layer between AP2 (authorization) and x402 (settlement)."
 readme = "README.md"
 license = {text = "MIT"}
