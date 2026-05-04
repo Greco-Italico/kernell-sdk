@@ -8,7 +8,7 @@ import argparse
 import json
 from pathlib import Path
 
-from kernell_os_sdk.router.offline_labeler import LabelConfig, OfflineLabeler
+from kernell_sdk.router.offline_labeler import LabelConfig, OfflineLabeler
 
 
 def _read_jsonl(path: Path):

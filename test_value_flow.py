@@ -1,4 +1,4 @@
-from kernell_os_sdk.cognitive.value_flow_engine import (
+from kernell_sdk.cognitive.value_flow_engine import (
     StrictAddress, SingleUseCapability, ValueNode, ValueFlowGraph, ValueFlowViolation
 )
 

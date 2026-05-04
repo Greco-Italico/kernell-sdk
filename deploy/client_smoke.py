@@ -74,7 +74,7 @@ def main() -> int:
     report["install"] = "ok"
 
     try:
-        import kernell_os_sdk as sdk  # pylint: disable=import-outside-toplevel
+        import kernell_sdk as sdk  # pylint: disable=import-outside-toplevel
     except Exception as exc:  # noqa: BLE001
         _print("import", f"FAILED ({exc})")
         print(json.dumps(report, sort_keys=True))
@@ -98,7 +98,7 @@ def main() -> int:
     report["cli"] = "ok"
 
     try:
-        from kernell_os_sdk.router import (  # pylint: disable=import-outside-toplevel
+        from kernell_sdk.router import (  # pylint: disable=import-outside-toplevel
             IntelligentRouter,
             PolicyLiteClient,
             TelemetryCollector,
@@ -181,7 +181,7 @@ def main() -> int:
 
     if _bool_env("SDK_SMOKE_FAILURE_MODE", "1"):
         try:
-            from kernell_os_sdk.router import IntelligentRouter  # pylint: disable=import-outside-toplevel
+            from kernell_sdk.router import IntelligentRouter  # pylint: disable=import-outside-toplevel
 
             router = IntelligentRouter(classifier=_MockBackend("f"), local_models={})
             failure_results = router.execute("failure mode probe")

@@ -14,8 +14,8 @@ from collections import OrderedDict
 
 import pytest
 
-from kernell_os_sdk.policy_engine import PolicyEngine, AgentCapabilities, PolicyResult
-from kernell_os_sdk.security.a2a_replay import A2AReplayGuard, A2AReplayError
+from kernell_sdk.policy_engine import PolicyEngine, AgentCapabilities, PolicyResult
+from kernell_sdk.security.a2a_replay import A2AReplayGuard, A2AReplayError
 
 
 # ── D-02: validate_argv() ───────────────────────────────────────────────────
@@ -115,7 +115,7 @@ class TestRedisReplayGuard:
     """Test RedisReplayGuard with a mock Redis client."""
 
     def _make_guard(self):
-        from kernell_os_sdk.security.a2a_replay_redis import RedisReplayGuard
+        from kernell_sdk.security.a2a_replay_redis import RedisReplayGuard
         mock_redis = MagicMock()
         mock_redis.ping.return_value = True
         mock_redis.set.return_value = True  # SETNX succeeds (new key)
@@ -171,7 +171,7 @@ class TestMachineSecretHardening:
     """Test permission checks and keyring fallback."""
 
     def test_verify_permissions_warns_on_open_perms(self, tmp_path):
-        from kernell_os_sdk.identity import _verify_secret_file_permissions
+        from kernell_sdk.identity import _verify_secret_file_permissions
         secret_file = tmp_path / ".machine_secret"
         secret_file.write_text("test-secret")
         os.chmod(str(secret_file), 0o644)  # world-readable — bad
@@ -184,7 +184,7 @@ class TestMachineSecretHardening:
         assert mode == 0o600
 
     def test_verify_permissions_silent_on_correct_perms(self, tmp_path):
-        from kernell_os_sdk.identity import _verify_secret_file_permissions
+        from kernell_sdk.identity import _verify_secret_file_permissions
         secret_file = tmp_path / ".machine_secret"
         secret_file.write_text("test-secret")
         os.chmod(str(secret_file), 0o600)
@@ -201,7 +201,7 @@ class TestMachineSecretHardening:
         mock_keyring.get_password.return_value = "from-keyring-secret"
 
         with patch.dict("sys.modules", {"keyring": mock_keyring}):
-            from kernell_os_sdk.identity import _get_machine_secret
+            from kernell_sdk.identity import _get_machine_secret
             # Re-import won't help due to caching; call directly
             # We test the logic by checking the keyring module would be tried
             mock_keyring.get_password.assert_not_called()  # not called yet

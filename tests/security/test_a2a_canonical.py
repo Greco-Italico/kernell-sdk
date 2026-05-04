@@ -3,9 +3,9 @@ import pytest
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
-from kernell_os_sdk.agent import _a2a_canonical_signing_bytes, A2AMessage
-from kernell_os_sdk.identity import sign_message_bytes, verify_signature_bytes
-from kernell_os_sdk.risk_engine import DataSensitivity
+from kernell_sdk.agent import _a2a_canonical_signing_bytes, A2AMessage
+from kernell_sdk.identity import sign_message_bytes, verify_signature_bytes
+from kernell_sdk.risk_engine import DataSensitivity
 
 
 @pytest.mark.invariant("E2")

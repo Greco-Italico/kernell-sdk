@@ -10,9 +10,9 @@ import uuid
 import psycopg2
 from psycopg2.errors import SerializationFailure
 
-# Ensure we can import kernell_os_sdk components
+# Ensure we can import kernell_sdk components
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from kernell_os_sdk.cognitive.postgres_engine import safe_commit_transfer, get_connection, init_db
+from kernell_sdk.cognitive.postgres_engine import safe_commit_transfer, get_connection, init_db
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("chaos_engine")

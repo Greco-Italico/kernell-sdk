@@ -6,7 +6,7 @@ import struct
 import pytest
 from hypothesis import given, settings, strategies as st
 
-from kernell_os_sdk.runtime.firecracker.auth_protocol import (
+from kernell_sdk.runtime.firecracker.auth_protocol import (
     AuthenticatedFrame,
     AuthenticationError,
     PayloadTooLargeError,

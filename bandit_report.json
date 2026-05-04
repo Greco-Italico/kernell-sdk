@@ -171,7 +171,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/__init__.py": {
+    "kernell_sdk/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -184,7 +184,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/adapters/__init__.py": {
+    "kernell_sdk/adapters/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -197,7 +197,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/adapters/base.py": {
+    "kernell_sdk/adapters/base.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -210,7 +210,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/adapters/gui_adapter.py": {
+    "kernell_sdk/adapters/gui_adapter.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -223,7 +223,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/adapters/interpreter_adapter.py": {
+    "kernell_sdk/adapters/interpreter_adapter.py": {
       "CONFIDENCE.HIGH": 2,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -236,7 +236,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/adapters/m2m_adapter.py": {
+    "kernell_sdk/adapters/m2m_adapter.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -249,7 +249,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/adapters/python_runtime.py": {
+    "kernell_sdk/adapters/python_runtime.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -262,7 +262,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/adapters/router.py": {
+    "kernell_sdk/adapters/router.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -275,7 +275,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/agent.py": {
+    "kernell_sdk/agent.py": {
       "CONFIDENCE.HIGH": 6,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -288,7 +288,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/benchmarks/__init__.py": {
+    "kernell_sdk/benchmarks/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -301,7 +301,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/benchmarks/suite.py": {
+    "kernell_sdk/benchmarks/suite.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -314,7 +314,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/budget.py": {
+    "kernell_sdk/budget.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -327,7 +327,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cli.py": {
+    "kernell_sdk/cli.py": {
       "CONFIDENCE.HIGH": 3,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -340,7 +340,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cluster/__init__.py": {
+    "kernell_sdk/cluster/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -353,7 +353,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cluster/bounty.py": {
+    "kernell_sdk/cluster/bounty.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -366,7 +366,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cluster/compute_pool.py": {
+    "kernell_sdk/cluster/compute_pool.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -379,7 +379,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cluster/discovery.py": {
+    "kernell_sdk/cluster/discovery.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -392,7 +392,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cluster/pool.py": {
+    "kernell_sdk/cluster/pool.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -405,7 +405,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cluster/sync.py": {
+    "kernell_sdk/cluster/sync.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -418,7 +418,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/__init__.py": {
+    "kernell_sdk/cognitive/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -431,7 +431,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/agent_role.py": {
+    "kernell_sdk/cognitive/agent_role.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -444,7 +444,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/agentic_loop.py": {
+    "kernell_sdk/cognitive/agentic_loop.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -457,7 +457,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/cognitive_router.py": {
+    "kernell_sdk/cognitive/cognitive_router.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -470,7 +470,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/config_loader.py": {
+    "kernell_sdk/cognitive/config_loader.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -483,7 +483,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/execution_graph.py": {
+    "kernell_sdk/cognitive/execution_graph.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -496,7 +496,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/governance/eigentrust_reputation.py": {
+    "kernell_sdk/cognitive/governance/eigentrust_reputation.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -509,7 +509,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/governance/staking_contract.py": {
+    "kernell_sdk/cognitive/governance/staking_contract.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -522,7 +522,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/intent_firewall.py": {
+    "kernell_sdk/cognitive/intent_firewall.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -535,7 +535,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/postgres_engine.py": {
+    "kernell_sdk/cognitive/postgres_engine.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -548,7 +548,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/reconciler.py": {
+    "kernell_sdk/cognitive/reconciler.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -561,7 +561,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/semantic_cache.py": {
+    "kernell_sdk/cognitive/semantic_cache.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -574,7 +574,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/semantic_memory_graph.py": {
+    "kernell_sdk/cognitive/semantic_memory_graph.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -587,7 +587,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/task.py": {
+    "kernell_sdk/cognitive/task.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -600,7 +600,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/tools.py": {
+    "kernell_sdk/cognitive/tools.py": {
       "CONFIDENCE.HIGH": 4,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -613,7 +613,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/cognitive/value_flow_engine.py": {
+    "kernell_sdk/cognitive/value_flow_engine.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -626,7 +626,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/config.py": {
+    "kernell_sdk/config.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -639,7 +639,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/constants.py": {
+    "kernell_sdk/constants.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -652,7 +652,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/crypto.py": {
+    "kernell_sdk/crypto.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -665,7 +665,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/crypto/passport.py": {
+    "kernell_sdk/crypto/passport.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -678,7 +678,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/dashboard.py": {
+    "kernell_sdk/dashboard.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -691,7 +691,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/dashboard_metrics.py": {
+    "kernell_sdk/dashboard_metrics.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -704,7 +704,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/delegation/__init__.py": {
+    "kernell_sdk/delegation/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -717,7 +717,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/delegation/manager.py": {
+    "kernell_sdk/delegation/manager.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -730,7 +730,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/delegation/merger.py": {
+    "kernell_sdk/delegation/merger.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -743,7 +743,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/delegation/task_queue.py": {
+    "kernell_sdk/delegation/task_queue.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -756,7 +756,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/economic_agent.py": {
+    "kernell_sdk/economic_agent.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -769,7 +769,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/escrow/__init__.py": {
+    "kernell_sdk/escrow/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -782,7 +782,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/escrow/manager.py": {
+    "kernell_sdk/escrow/manager.py": {
       "CONFIDENCE.HIGH": 6,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -795,7 +795,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/execution_gate.py": {
+    "kernell_sdk/execution_gate.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -808,7 +808,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/governance/__init__.py": {
+    "kernell_sdk/governance/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -821,7 +821,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/governance/cross_chain.py": {
+    "kernell_sdk/governance/cross_chain.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -834,7 +834,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/governance/dao.py": {
+    "kernell_sdk/governance/dao.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -847,7 +847,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/governance/federation.py": {
+    "kernell_sdk/governance/federation.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -860,7 +860,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/governance/financing.py": {
+    "kernell_sdk/governance/financing.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -873,7 +873,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/gui.py": {
+    "kernell_sdk/gui.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -886,7 +886,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/hardware.py": {
+    "kernell_sdk/hardware.py": {
       "CONFIDENCE.HIGH": 5,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -899,7 +899,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/health.py": {
+    "kernell_sdk/health.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -912,7 +912,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/identity.py": {
+    "kernell_sdk/identity.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -925,7 +925,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/launcher.py": {
+    "kernell_sdk/launcher.py": {
       "CONFIDENCE.HIGH": 3,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -938,7 +938,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/llm/__init__.py": {
+    "kernell_sdk/llm/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -951,7 +951,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/llm/anthropic.py": {
+    "kernell_sdk/llm/anthropic.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -964,7 +964,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/llm/base.py": {
+    "kernell_sdk/llm/base.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -977,7 +977,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/llm/ollama.py": {
+    "kernell_sdk/llm/ollama.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -990,7 +990,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/llm/openai.py": {
+    "kernell_sdk/llm/openai.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1003,7 +1003,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/llm/prompts/gemma4.py": {
+    "kernell_sdk/llm/prompts/gemma4.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1016,7 +1016,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/llm/router.py": {
+    "kernell_sdk/llm/router.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1029,7 +1029,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/log_redactor.py": {
+    "kernell_sdk/log_redactor.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1042,7 +1042,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace/__init__.py": {
+    "kernell_sdk/marketplace/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1055,7 +1055,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace/auction.py": {
+    "kernell_sdk/marketplace/auction.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1068,7 +1068,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace/discovery.py": {
+    "kernell_sdk/marketplace/discovery.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1081,7 +1081,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace/dynamic_pricing.py": {
+    "kernell_sdk/marketplace/dynamic_pricing.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1094,7 +1094,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace/gpu_market.py": {
+    "kernell_sdk/marketplace/gpu_market.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1107,7 +1107,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace/insurance.py": {
+    "kernell_sdk/marketplace/insurance.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1120,7 +1120,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace/listings.py": {
+    "kernell_sdk/marketplace/listings.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1133,7 +1133,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace/matching.py": {
+    "kernell_sdk/marketplace/matching.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1146,7 +1146,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace/proxy_market.py": {
+    "kernell_sdk/marketplace/proxy_market.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1159,7 +1159,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/marketplace_agent.py": {
+    "kernell_sdk/marketplace_agent.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 1,
@@ -1172,7 +1172,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/memory.py": {
+    "kernell_sdk/memory.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1185,7 +1185,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/orchestrator.py": {
+    "kernell_sdk/orchestrator.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1198,7 +1198,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/persister.py": {
+    "kernell_sdk/persister.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1211,7 +1211,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/policy_engine.py": {
+    "kernell_sdk/policy_engine.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 2,
@@ -1224,7 +1224,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/reputation/__init__.py": {
+    "kernell_sdk/reputation/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1237,7 +1237,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/reputation/engine.py": {
+    "kernell_sdk/reputation/engine.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1250,7 +1250,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/resilience.py": {
+    "kernell_sdk/resilience.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1263,7 +1263,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/risk_engine.py": {
+    "kernell_sdk/risk_engine.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1276,7 +1276,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/__init__.py": {
+    "kernell_sdk/router/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1289,7 +1289,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/classifier_pro.py": {
+    "kernell_sdk/router/classifier_pro.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1302,7 +1302,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/dashboard_bridge.py": {
+    "kernell_sdk/router/dashboard_bridge.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1315,7 +1315,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/decomposer.py": {
+    "kernell_sdk/router/decomposer.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1328,7 +1328,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/entrypoint.py": {
+    "kernell_sdk/router/entrypoint.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1341,7 +1341,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/estimator.py": {
+    "kernell_sdk/router/estimator.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1354,7 +1354,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/intelligent_router.py": {
+    "kernell_sdk/router/intelligent_router.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1367,7 +1367,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/metrics.py": {
+    "kernell_sdk/router/metrics.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1380,7 +1380,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/model_registry.py": {
+    "kernell_sdk/router/model_registry.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1393,7 +1393,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/summarizer.py": {
+    "kernell_sdk/router/summarizer.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1406,7 +1406,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/telemetry_collector.py": {
+    "kernell_sdk/router/telemetry_collector.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1419,7 +1419,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/types.py": {
+    "kernell_sdk/router/types.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1432,7 +1432,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/router/verifier.py": {
+    "kernell_sdk/router/verifier.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1445,7 +1445,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/__init__.py": {
+    "kernell_sdk/runtime/__init__.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1458,7 +1458,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/base.py": {
+    "kernell_sdk/runtime/base.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1471,7 +1471,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/docker_runtime.py": {
+    "kernell_sdk/runtime/docker_runtime.py": {
       "CONFIDENCE.HIGH": 6,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1484,7 +1484,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/errors.py": {
+    "kernell_sdk/runtime/errors.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1497,7 +1497,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/__init__.py": {
+    "kernell_sdk/runtime/firecracker/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1510,7 +1510,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/auth_protocol.py": {
+    "kernell_sdk/runtime/firecracker/auth_protocol.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1523,7 +1523,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/billing.py": {
+    "kernell_sdk/runtime/firecracker/billing.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1536,7 +1536,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/cgroup_limiter.py": {
+    "kernell_sdk/runtime/firecracker/cgroup_limiter.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1549,7 +1549,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/integrity.py": {
+    "kernell_sdk/runtime/firecracker/integrity.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1562,7 +1562,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/ledger.py": {
+    "kernell_sdk/runtime/firecracker/ledger.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1575,7 +1575,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/manager.py": {
+    "kernell_sdk/runtime/firecracker/manager.py": {
       "CONFIDENCE.HIGH": 5,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 3,
@@ -1588,7 +1588,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/metrics.py": {
+    "kernell_sdk/runtime/firecracker/metrics.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1601,7 +1601,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/orchestrator.py": {
+    "kernell_sdk/runtime/firecracker/orchestrator.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1614,7 +1614,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/pool.py": {
+    "kernell_sdk/runtime/firecracker/pool.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1627,7 +1627,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/resilience.py": {
+    "kernell_sdk/runtime/firecracker/resilience.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1640,7 +1640,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/runner.py": {
+    "kernell_sdk/runtime/firecracker/runner.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1653,7 +1653,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/scheduler.py": {
+    "kernell_sdk/runtime/firecracker/scheduler.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1666,7 +1666,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/server.py": {
+    "kernell_sdk/runtime/firecracker/server.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 1,
@@ -1679,7 +1679,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/telemetry.py": {
+    "kernell_sdk/runtime/firecracker/telemetry.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1692,7 +1692,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker/tenant.py": {
+    "kernell_sdk/runtime/firecracker/tenant.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1705,7 +1705,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker_client.py": {
+    "kernell_sdk/runtime/firecracker_client.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1718,7 +1718,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/firecracker_runtime.py": {
+    "kernell_sdk/runtime/firecracker_runtime.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 1,
@@ -1731,7 +1731,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/intelligent_router.py": {
+    "kernell_sdk/runtime/intelligent_router.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1744,7 +1744,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/models.py": {
+    "kernell_sdk/runtime/models.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1757,7 +1757,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/sandbox.py": {
+    "kernell_sdk/runtime/sandbox.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1770,7 +1770,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/sandbox_validator.py": {
+    "kernell_sdk/runtime/sandbox_validator.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1783,7 +1783,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/scheduler.py": {
+    "kernell_sdk/runtime/scheduler.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1796,7 +1796,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/subprocess_runtime.py": {
+    "kernell_sdk/runtime/subprocess_runtime.py": {
       "CONFIDENCE.HIGH": 2,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1809,7 +1809,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/runtime/worker_loader.py": {
+    "kernell_sdk/runtime/worker_loader.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1822,7 +1822,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/sandbox.py": {
+    "kernell_sdk/sandbox.py": {
       "CONFIDENCE.HIGH": 8,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 3,
@@ -1835,7 +1835,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/__init__.py": {
+    "kernell_sdk/security/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1848,7 +1848,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/a2a_replay.py": {
+    "kernell_sdk/security/a2a_replay.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1861,7 +1861,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/a2a_replay_redis.py": {
+    "kernell_sdk/security/a2a_replay_redis.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1874,7 +1874,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/capabilities.py": {
+    "kernell_sdk/security/capabilities.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1887,7 +1887,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/intent_firewall.py": {
+    "kernell_sdk/security/intent_firewall.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 2,
@@ -1900,7 +1900,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/kms/__init__.py": {
+    "kernell_sdk/security/kms/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1913,7 +1913,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/kms/base.py": {
+    "kernell_sdk/security/kms/base.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1926,7 +1926,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/kms/local_kms.py": {
+    "kernell_sdk/security/kms/local_kms.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1939,7 +1939,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/kms/vault_kms.py": {
+    "kernell_sdk/security/kms/vault_kms.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1952,7 +1952,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/policy.py": {
+    "kernell_sdk/security/policy.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1965,7 +1965,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/rate_limiter.py": {
+    "kernell_sdk/security/rate_limiter.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1978,7 +1978,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/sandbox/sandbox_launcher.py": {
+    "kernell_sdk/security/sandbox/sandbox_launcher.py": {
       "CONFIDENCE.HIGH": 2,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -1991,7 +1991,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/sandbox/sandbox_worker.py": {
+    "kernell_sdk/security/sandbox/sandbox_worker.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2004,7 +2004,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/sandbox/seccomp_profile.py": {
+    "kernell_sdk/security/sandbox/seccomp_profile.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2017,7 +2017,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/signer.py": {
+    "kernell_sdk/security/signer.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2030,7 +2030,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/ssrf.py": {
+    "kernell_sdk/security/ssrf.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2043,7 +2043,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/security/verifier.py": {
+    "kernell_sdk/security/verifier.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2056,7 +2056,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/shadow/__init__.py": {
+    "kernell_sdk/shadow/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2069,7 +2069,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/shadow/proxy.py": {
+    "kernell_sdk/shadow/proxy.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2082,7 +2082,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/skill_loader.py": {
+    "kernell_sdk/skill_loader.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2095,7 +2095,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/telemetry.py": {
+    "kernell_sdk/telemetry.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2108,7 +2108,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/token_estimator.py": {
+    "kernell_sdk/token_estimator.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2121,7 +2121,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/tracing.py": {
+    "kernell_sdk/tracing.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2134,7 +2134,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/wallet.py": {
+    "kernell_sdk/wallet.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2147,7 +2147,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/worker/__init__.py": {
+    "kernell_sdk/worker/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2160,7 +2160,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/worker/app.py": {
+    "kernell_sdk/worker/app.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2173,7 +2173,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/worker/auth.py": {
+    "kernell_sdk/worker/auth.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2186,7 +2186,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/worker/config.py": {
+    "kernell_sdk/worker/config.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2199,7 +2199,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/worker/runtime_adapter.py": {
+    "kernell_sdk/worker/runtime_adapter.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2212,7 +2212,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "kernell_os_sdk/worker/schemas.py": {
+    "kernell_sdk/worker/schemas.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -2273,7 +2273,7 @@
       "code": "1 import subprocess\n2 import shlex\n3 from typing import Dict, Any\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/adapters/interpreter_adapter.py",
+      "filename": "kernell_sdk/adapters/interpreter_adapter.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2293,7 +2293,7 @@
       "code": "46                 args,\n47                 shell=False,\n48                 capture_output=True,\n49                 text=True,\n50                 timeout=60\n51             )\n52             \n53             if res.returncode == 0:\n54                 return {\"status\": \"success\", \"output\": res.stdout}\n",
       "col_offset": 18,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/adapters/interpreter_adapter.py",
+      "filename": "kernell_sdk/adapters/interpreter_adapter.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2319,7 +2319,7 @@
       "code": "3 import re\n4 import subprocess\n5 import shlex\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/agent.py",
+      "filename": "kernell_sdk/agent.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2339,7 +2339,7 @@
       "code": "191             args,\n192             shell=False,\n193             capture_output=True,\n194             text=True,\n195             timeout=self.capabilities.max_cpu_seconds,\n196         )\n197         stdout = res.stdout[: self.capabilities.max_output_bytes]\n198 \n199         sensitivity = DataSensitivity.PUBLIC\n",
       "col_offset": 14,
       "end_col_offset": 9,
-      "filename": "kernell_os_sdk/agent.py",
+      "filename": "kernell_sdk/agent.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2365,7 +2365,7 @@
       "code": "402                 })\n403         except Exception as e:\n404             pass\n405         return earned\n",
       "col_offset": 8,
       "end_col_offset": 16,
-      "filename": "kernell_os_sdk/agent.py",
+      "filename": "kernell_sdk/agent.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2386,7 +2386,7 @@
       "code": "427                 })\n428         except Exception as e:\n429             pass\n430         return True\n",
       "col_offset": 8,
       "end_col_offset": 16,
-      "filename": "kernell_os_sdk/agent.py",
+      "filename": "kernell_sdk/agent.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2407,7 +2407,7 @@
       "code": "497                     return entry.get(\"public_key_hex\")\n498             except Exception:\n499                 pass\n500         return None\n",
       "col_offset": 12,
       "end_col_offset": 20,
-      "filename": "kernell_os_sdk/agent.py",
+      "filename": "kernell_sdk/agent.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2428,7 +2428,7 @@
       "code": "638                 }, timeout=2)\n639             except Exception:\n640                 pass\n641                 \n",
       "col_offset": 12,
       "end_col_offset": 20,
-      "filename": "kernell_os_sdk/agent.py",
+      "filename": "kernell_sdk/agent.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2449,7 +2449,7 @@
       "code": "12 import shutil\n13 import subprocess\n14 \n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/cli.py",
+      "filename": "kernell_sdk/cli.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2469,7 +2469,7 @@
       "code": "103     try:\n104         subprocess.run([\"docker\", \"--version\"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)\n105         print(\"\u2705 OK\")\n",
       "col_offset": 8,
       "end_col_offset": 113,
-      "filename": "kernell_os_sdk/cli.py",
+      "filename": "kernell_sdk/cli.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2489,7 +2489,7 @@
       "code": "103     try:\n104         subprocess.run([\"docker\", \"--version\"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)\n105         print(\"\u2705 OK\")\n",
       "col_offset": 8,
       "end_col_offset": 113,
-      "filename": "kernell_os_sdk/cli.py",
+      "filename": "kernell_sdk/cli.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2509,7 +2509,7 @@
       "code": "136                     text = decoded\n137         except Exception:\n138             pass\n139         # 3. Unicode normalization\n",
       "col_offset": 8,
       "end_col_offset": 16,
-      "filename": "kernell_os_sdk/cognitive/intent_firewall.py",
+      "filename": "kernell_sdk/cognitive/intent_firewall.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2530,7 +2530,7 @@
       "code": "13 import os\n14 import subprocess\n15 from typing import Callable, Dict, Any, List\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/cognitive/tools.py",
+      "filename": "kernell_sdk/cognitive/tools.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2550,7 +2550,7 @@
       "code": "78             result = subprocess.run(\n79                 argv, shell=False, cwd=cwd, text=True,\n80                 capture_output=True, timeout=120\n81             )\n82             out = result.stdout + \"\\n\" + result.stderr\n83             return out.strip() or \"Command executed successfully (no output).\"\n",
       "col_offset": 21,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/cognitive/tools.py",
+      "filename": "kernell_sdk/cognitive/tools.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2573,7 +2573,7 @@
       "code": "135             # Fallback to grep if rg not installed\n136             result = subprocess.run(\n137                 [\"grep\", \"-rnI\", query, path], text=True, capture_output=True\n138             )\n139             lines = result.stdout.splitlines()\n",
       "col_offset": 21,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/cognitive/tools.py",
+      "filename": "kernell_sdk/cognitive/tools.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2595,7 +2595,7 @@
       "code": "135             # Fallback to grep if rg not installed\n136             result = subprocess.run(\n137                 [\"grep\", \"-rnI\", query, path], text=True, capture_output=True\n138             )\n139             lines = result.stdout.splitlines()\n",
       "col_offset": 21,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/cognitive/tools.py",
+      "filename": "kernell_sdk/cognitive/tools.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2617,7 +2617,7 @@
       "code": "299                 self._conn.execute(\"ROLLBACK\")\n300             except Exception:\n301                 pass\n302             raise\n",
       "col_offset": 12,
       "end_col_offset": 20,
-      "filename": "kernell_os_sdk/escrow/manager.py",
+      "filename": "kernell_sdk/escrow/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2638,7 +2638,7 @@
       "code": "338                 self._conn.execute(\"ROLLBACK\")\n339             except Exception:\n340                 pass\n341             raise\n",
       "col_offset": 12,
       "end_col_offset": 20,
-      "filename": "kernell_os_sdk/escrow/manager.py",
+      "filename": "kernell_sdk/escrow/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2659,7 +2659,7 @@
       "code": "377                 self._conn.execute(\"ROLLBACK\")\n378             except Exception:\n379                 pass\n380             raise\n",
       "col_offset": 12,
       "end_col_offset": 20,
-      "filename": "kernell_os_sdk/escrow/manager.py",
+      "filename": "kernell_sdk/escrow/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2680,7 +2680,7 @@
       "code": "416                 self._conn.execute(\"ROLLBACK\")\n417             except Exception:\n418                 pass\n419             raise\n",
       "col_offset": 12,
       "end_col_offset": 20,
-      "filename": "kernell_os_sdk/escrow/manager.py",
+      "filename": "kernell_sdk/escrow/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2701,7 +2701,7 @@
       "code": "455                 self._conn.execute(\"ROLLBACK\")\n456             except Exception:\n457                 pass\n458             raise\n",
       "col_offset": 12,
       "end_col_offset": 20,
-      "filename": "kernell_os_sdk/escrow/manager.py",
+      "filename": "kernell_sdk/escrow/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2722,7 +2722,7 @@
       "code": "502                 self._conn.execute(\"ROLLBACK\")\n503             except Exception:\n504                 pass\n505             raise\n",
       "col_offset": 12,
       "end_col_offset": 20,
-      "filename": "kernell_os_sdk/escrow/manager.py",
+      "filename": "kernell_sdk/escrow/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2743,7 +2743,7 @@
       "code": "8 import platform\n9 import subprocess\n10 import logging\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/hardware.py",
+      "filename": "kernell_sdk/hardware.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2763,7 +2763,7 @@
       "code": "52             try:\n53                 output = subprocess.check_output(\n54                     [\"nvidia-smi\", \"--query-gpu=memory.total\", \"--format=csv,noheader,nounits\"],\n55                     text=True\n56                 ).strip()\n57                 vram_mb = sum(int(x) for x in output.split('\\n'))\n",
       "col_offset": 25,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/hardware.py",
+      "filename": "kernell_sdk/hardware.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2786,7 +2786,7 @@
       "code": "52             try:\n53                 output = subprocess.check_output(\n54                     [\"nvidia-smi\", \"--query-gpu=memory.total\", \"--format=csv,noheader,nounits\"],\n55                     text=True\n56                 ).strip()\n57                 vram_mb = sum(int(x) for x in output.split('\\n'))\n",
       "col_offset": 25,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/hardware.py",
+      "filename": "kernell_sdk/hardware.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2809,7 +2809,7 @@
       "code": "65             try:\n66                 output = subprocess.check_output(\n67                     [\"rocm-smi\", \"--showmeminfo\", \"vram\"],\n68                     text=True\n69                 )\n70                 # Simplified parsing for rocm-smi output\n",
       "col_offset": 25,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/hardware.py",
+      "filename": "kernell_sdk/hardware.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2832,7 +2832,7 @@
       "code": "65             try:\n66                 output = subprocess.check_output(\n67                     [\"rocm-smi\", \"--showmeminfo\", \"vram\"],\n68                     text=True\n69                 )\n70                 # Simplified parsing for rocm-smi output\n",
       "col_offset": 25,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/hardware.py",
+      "filename": "kernell_sdk/hardware.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2855,7 +2855,7 @@
       "code": "85         return new_secret\n86     except Exception:\n87         # keyring not installed or backend unavailable (headless server, etc.)\n88         pass\n89 \n",
       "col_offset": 4,
       "end_col_offset": 12,
-      "filename": "kernell_os_sdk/identity.py",
+      "filename": "kernell_sdk/identity.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -2877,7 +2877,7 @@
       "code": "7 from pydantic import BaseModel\n8 import subprocess\n9 from pathlib import Path\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/launcher.py",
+      "filename": "kernell_sdk/launcher.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2897,7 +2897,7 @@
       "code": "360         \n361     subprocess.Popen([sys.executable, \"main.py\"])\n362     return {\"status\": \"success\"}\n",
       "col_offset": 4,
       "end_col_offset": 49,
-      "filename": "kernell_os_sdk/launcher.py",
+      "filename": "kernell_sdk/launcher.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2917,7 +2917,7 @@
       "code": "380         print(\"Configuraci\u00f3n encontrada. Iniciando swarm directamente...\")\n381         subprocess.run([sys.executable, \"main.py\"], check=True)\n382 \n",
       "col_offset": 8,
       "end_col_offset": 63,
-      "filename": "kernell_os_sdk/launcher.py",
+      "filename": "kernell_sdk/launcher.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -2937,7 +2937,7 @@
       "code": "46         # Keep escrow available but explicitly ephemeral unless keys are registered.\n47         self.escrow_manager = EscrowManager(db_path=\"/tmp/kernell_escrow.sqlite3\")\n48         \n",
       "col_offset": 52,
       "end_col_offset": 81,
-      "filename": "kernell_os_sdk/marketplace_agent.py",
+      "filename": "kernell_sdk/marketplace_agent.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -2957,7 +2957,7 @@
       "code": "57     read: List[str] = Field(\n58         default_factory=lambda: [\"/tmp\", \"/data/public\"],\n59         description=\"Paths the agent can read from\"\n",
       "col_offset": 33,
       "end_col_offset": 39,
-      "filename": "kernell_os_sdk/policy_engine.py",
+      "filename": "kernell_sdk/policy_engine.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -2977,7 +2977,7 @@
       "code": "61     write: List[str] = Field(\n62         default_factory=lambda: [\"/tmp\"],\n63         description=\"Paths the agent can write to\"\n",
       "col_offset": 33,
       "end_col_offset": 39,
-      "filename": "kernell_os_sdk/policy_engine.py",
+      "filename": "kernell_sdk/policy_engine.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -2997,7 +2997,7 @@
       "code": "140                         self.on_open(f\"Circuit '{self.name}' opened: {reason}\")\n141                     except Exception:\n142                         pass\n143 \n",
       "col_offset": 20,
       "end_col_offset": 28,
-      "filename": "kernell_os_sdk/resilience.py",
+      "filename": "kernell_sdk/resilience.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -3018,7 +3018,7 @@
       "code": "114         if self._config.canary_percent > 0:\n115             if random.random() < self._config.canary_percent:\n116                 return self._use_intelligent_safe(task, messages, **kwargs)\n",
       "col_offset": 15,
       "end_col_offset": 30,
-      "filename": "kernell_os_sdk/router/entrypoint.py",
+      "filename": "kernell_sdk/router/entrypoint.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 330,
@@ -3038,7 +3038,7 @@
       "code": "391                 f.unlink(missing_ok=True)\n392         except Exception:\n393             pass\n394 \n",
       "col_offset": 8,
       "end_col_offset": 16,
-      "filename": "kernell_os_sdk/router/telemetry_collector.py",
+      "filename": "kernell_sdk/router/telemetry_collector.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -3059,7 +3059,7 @@
       "code": "3 from .errors import RuntimeErrorBase, SandboxViolation, ExecutionTimeout\n4 from .subprocess_runtime import SubprocessRuntime\n5 from .docker_runtime import DockerRuntime\n",
       "col_offset": 0,
       "end_col_offset": 49,
-      "filename": "kernell_os_sdk/runtime/__init__.py",
+      "filename": "kernell_sdk/runtime/__init__.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3079,7 +3079,7 @@
       "code": "15 \n16 import subprocess\n17 import tempfile\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/runtime/docker_runtime.py",
+      "filename": "kernell_sdk/runtime/docker_runtime.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3099,7 +3099,7 @@
       "code": "108 \n109             proc = subprocess.run(\n110                 cmd,\n111                 capture_output=True,\n112                 timeout=self.timeout,\n113                 check=False,  # manejamos returncode manualmente\n114             )\n115 \n",
       "col_offset": 19,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/runtime/docker_runtime.py",
+      "filename": "kernell_sdk/runtime/docker_runtime.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3124,7 +3124,7 @@
       "code": "206     try:\n207         subprocess.run(\n208             [\"docker\", \"info\"],\n209             capture_output=True,\n210             timeout=5,\n211             check=True,\n212         )\n213     except (FileNotFoundError, subprocess.CalledProcessError) as exc:\n",
       "col_offset": 8,
       "end_col_offset": 9,
-      "filename": "kernell_os_sdk/runtime/docker_runtime.py",
+      "filename": "kernell_sdk/runtime/docker_runtime.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3149,7 +3149,7 @@
       "code": "206     try:\n207         subprocess.run(\n208             [\"docker\", \"info\"],\n209             capture_output=True,\n210             timeout=5,\n211             check=True,\n212         )\n213     except (FileNotFoundError, subprocess.CalledProcessError) as exc:\n",
       "col_offset": 8,
       "end_col_offset": 9,
-      "filename": "kernell_os_sdk/runtime/docker_runtime.py",
+      "filename": "kernell_sdk/runtime/docker_runtime.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3174,7 +3174,7 @@
       "code": "248 def _force_kill_container(name: str) -> None:\n249     subprocess.run(\n250         [\"docker\", \"kill\", name],\n251         capture_output=True,\n252         timeout=5,\n253         check=False,\n254     )\n",
       "col_offset": 4,
       "end_col_offset": 5,
-      "filename": "kernell_os_sdk/runtime/docker_runtime.py",
+      "filename": "kernell_sdk/runtime/docker_runtime.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3199,7 +3199,7 @@
       "code": "248 def _force_kill_container(name: str) -> None:\n249     subprocess.run(\n250         [\"docker\", \"kill\", name],\n251         capture_output=True,\n252         timeout=5,\n253         check=False,\n254     )\n",
       "col_offset": 4,
       "end_col_offset": 5,
-      "filename": "kernell_os_sdk/runtime/docker_runtime.py",
+      "filename": "kernell_sdk/runtime/docker_runtime.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3224,7 +3224,7 @@
       "code": "78                         self.chain_length = len(lines)\n79         except Exception:\n80             pass  # Start fresh if file is corrupted\n81 \n",
       "col_offset": 8,
       "end_col_offset": 16,
-      "filename": "kernell_os_sdk/runtime/firecracker/ledger.py",
+      "filename": "kernell_sdk/runtime/firecracker/ledger.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -3245,7 +3245,7 @@
       "code": "1 import subprocess\n2 import uuid\n3 import os\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/runtime/firecracker/manager.py",
+      "filename": "kernell_sdk/runtime/firecracker/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3265,7 +3265,7 @@
       "code": "32         vm_id = str(uuid.uuid4())\n33         socket_path = f\"/tmp/firecracker-{vm_id}.sock\"\n34 \n",
       "col_offset": 24,
       "end_col_offset": 41,
-      "filename": "kernell_os_sdk/runtime/firecracker/manager.py",
+      "filename": "kernell_sdk/runtime/firecracker/manager.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -3285,7 +3285,7 @@
       "code": "35         # 1. Start firecracker process\n36         process = subprocess.Popen(\n37             [\"firecracker\", \"--api-sock\", socket_path],\n38             stdout=subprocess.PIPE,\n39             stderr=subprocess.PIPE,\n40             text=True\n41         )\n42 \n",
       "col_offset": 18,
       "end_col_offset": 9,
-      "filename": "kernell_os_sdk/runtime/firecracker/manager.py",
+      "filename": "kernell_sdk/runtime/firecracker/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3310,7 +3310,7 @@
       "code": "35         # 1. Start firecracker process\n36         process = subprocess.Popen(\n37             [\"firecracker\", \"--api-sock\", socket_path],\n38             stdout=subprocess.PIPE,\n39             stderr=subprocess.PIPE,\n40             text=True\n41         )\n42 \n",
       "col_offset": 18,
       "end_col_offset": 9,
-      "filename": "kernell_os_sdk/runtime/firecracker/manager.py",
+      "filename": "kernell_sdk/runtime/firecracker/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3335,7 +3335,7 @@
       "code": "89                 \"guest_cid\": 3,\n90                 \"uds_path\": f\"/tmp/vsock-{vm_id}.sock\"\n91             }).raise_for_status()\n",
       "col_offset": 30,
       "end_col_offset": 41,
-      "filename": "kernell_os_sdk/runtime/firecracker/manager.py",
+      "filename": "kernell_sdk/runtime/firecracker/manager.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -3355,7 +3355,7 @@
       "code": "126         vm_id = str(uuid.uuid4())\n127         socket_path = f\"/tmp/firecracker-{vm_id}.sock\"\n128 \n",
       "col_offset": 24,
       "end_col_offset": 41,
-      "filename": "kernell_os_sdk/runtime/firecracker/manager.py",
+      "filename": "kernell_sdk/runtime/firecracker/manager.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -3375,7 +3375,7 @@
       "code": "128 \n129         process = subprocess.Popen(\n130             [\"firecracker\", \"--api-sock\", socket_path],\n131             stdout=subprocess.PIPE,\n132             stderr=subprocess.PIPE,\n133             text=True\n134         )\n135 \n",
       "col_offset": 18,
       "end_col_offset": 9,
-      "filename": "kernell_os_sdk/runtime/firecracker/manager.py",
+      "filename": "kernell_sdk/runtime/firecracker/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3400,7 +3400,7 @@
       "code": "128 \n129         process = subprocess.Popen(\n130             [\"firecracker\", \"--api-sock\", socket_path],\n131             stdout=subprocess.PIPE,\n132             stderr=subprocess.PIPE,\n133             text=True\n134         )\n135 \n",
       "col_offset": 18,
       "end_col_offset": 9,
-      "filename": "kernell_os_sdk/runtime/firecracker/manager.py",
+      "filename": "kernell_sdk/runtime/firecracker/manager.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3425,7 +3425,7 @@
       "code": "132                         self.pool.append(vm)\n133                 except Exception:\n134                     pass\n135 \n",
       "col_offset": 16,
       "end_col_offset": 24,
-      "filename": "kernell_os_sdk/runtime/firecracker/pool.py",
+      "filename": "kernell_sdk/runtime/firecracker/pool.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -3446,7 +3446,7 @@
       "code": "87             delay = min(base_delay * (2 ** attempt), max_delay)\n88             jitter = delay * jitter_factor * random.random()\n89             time.sleep(delay + jitter)\n",
       "col_offset": 45,
       "end_col_offset": 60,
-      "filename": "kernell_os_sdk/runtime/firecracker/resilience.py",
+      "filename": "kernell_sdk/runtime/firecracker/resilience.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 330,
@@ -3466,7 +3466,7 @@
       "code": "153     port = int(os.getenv(\"FC_CONTROL_PLANE_PORT\", \"8080\"))\n154     if host == \"0.0.0.0\" and not os.getenv(\"FC_ALLOW_PUBLIC_BIND\", \"\").strip():\n155         raise RuntimeError(\"Refusing to bind 0.0.0.0 without FC_ALLOW_PUBLIC_BIND=1\")\n",
       "col_offset": 15,
       "end_col_offset": 24,
-      "filename": "kernell_os_sdk/runtime/firecracker/server.py",
+      "filename": "kernell_sdk/runtime/firecracker/server.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 605,
@@ -3486,7 +3486,7 @@
       "code": "36 \n37     def __init__(self, kernel_path: str, rootfs_path: str, snapshot_dir=\"/tmp/fcsnapshots\"):\n38         self.manager = FirecrackerManager(kernel_path, rootfs_path)\n",
       "col_offset": 72,
       "end_col_offset": 90,
-      "filename": "kernell_os_sdk/runtime/firecracker_runtime.py",
+      "filename": "kernell_sdk/runtime/firecracker_runtime.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -3506,7 +3506,7 @@
       "code": "100         percent = self.config.get(\"FIRECRACKER_CANARY_PERCENT\", 0.01)\n101         if random.random() < percent:\n102             try:\n",
       "col_offset": 11,
       "end_col_offset": 26,
-      "filename": "kernell_os_sdk/runtime/intelligent_router.py",
+      "filename": "kernell_sdk/runtime/intelligent_router.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 330,
@@ -3526,7 +3526,7 @@
       "code": "84             weights = [w.health_score for w in healthy]\n85             chosen = random.choices(healthy, weights=weights, k=1)[0]\n86 \n",
       "col_offset": 21,
       "end_col_offset": 66,
-      "filename": "kernell_os_sdk/runtime/scheduler.py",
+      "filename": "kernell_sdk/runtime/scheduler.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 330,
@@ -3546,7 +3546,7 @@
       "code": "1 import subprocess\n2 import os\n3 import signal\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/runtime/subprocess_runtime.py",
+      "filename": "kernell_sdk/runtime/subprocess_runtime.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3566,7 +3566,7 @@
       "code": "101         try:\n102             result = subprocess.run(\n103                 [\n104                     NSJAIL_PATH,\n105                     \"--config\",\n106                     NSJAIL_CONFIG,\n107                     \"--\",\n108                     \"python3\",\n109                     tmp_file,\n110                 ],\n111                 capture_output=True,\n112                 text=True,\n113                 timeout=request.timeout,\n114             )\n115 \n",
       "col_offset": 21,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/runtime/subprocess_runtime.py",
+      "filename": "kernell_sdk/runtime/subprocess_runtime.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3598,7 +3598,7 @@
       "code": "50                     last_mtime = mtime\n51         except Exception:\n52             pass\n53         await asyncio.sleep(5)\n",
       "col_offset": 8,
       "end_col_offset": 16,
-      "filename": "kernell_os_sdk/runtime/worker_loader.py",
+      "filename": "kernell_sdk/runtime/worker_loader.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -3619,7 +3619,7 @@
       "code": "13 \"\"\"\n14 import subprocess\n15 import logging\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3639,7 +3639,7 @@
       "code": "31     \"\"\"\n32     assert \"REEMPLAZAR\" not in AGENT_BASE_IMAGE, \"Falta pin de SHA256 para Docker (KOS-015)\"\n33     try:\n",
       "col_offset": 4,
       "end_col_offset": 92,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -3659,7 +3659,7 @@
       "code": "33     try:\n34         result = subprocess.run(\n35             [\"/usr/bin/docker\", \"inspect\", \"--format={{index .RepoDigests 0}}\", AGENT_BASE_IMAGE_TAG],\n36             capture_output=True, text=True, timeout=15\n37         )\n38         if result.returncode != 0:\n",
       "col_offset": 17,
       "end_col_offset": 9,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3682,7 +3682,7 @@
       "code": "156             # tmpfs for writable areas inside the container\n157             \"--tmpfs\", \"/tmp:rw,noexec,nosuid,size=256m\",\n158             \"--tmpfs\", \"/var/tmp:rw,noexec,nosuid,size=128m\",\n159         ]\n160 \n161         # Network isolation\n162         if not self.permissions.network_access:\n163             args.extend([\"--network\", \"none\"])\n164 \n165         # Mount ONLY allowed paths (NEVER mount /)\n166         if self.permissions.file_system_read or self.permissions.file_system_write:\n167             mode = \"rw\" if self.permissions.file_system_write else \"ro\"\n168             for host_path in self.permissions.allowed_paths:\n169                 try:\n170                     self._validate_mount_path(host_path)\n171                 except Exception as e:\n172                     logger.error(f\"SECURITY: Refused to mount sensitive host path: {host_path} - {e}\")\n173                     continue\n174                 \n175                 resolved_path = Path(host_path).resolve()\n176                 host_path_str = str(resolved_path)\n177                 \n178 \n179                 container_path = f\"/workspace/{resolved_path.name}\"\n",
       "col_offset": 23,
       "end_col_offset": 56,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -3723,7 +3723,7 @@
       "code": "157             \"--tmpfs\", \"/tmp:rw,noexec,nosuid,size=256m\",\n158             \"--tmpfs\", \"/var/tmp:rw,noexec,nosuid,size=128m\",\n159         ]\n160 \n161         # Network isolation\n162         if not self.permissions.network_access:\n163             args.extend([\"--network\", \"none\"])\n164 \n165         # Mount ONLY allowed paths (NEVER mount /)\n166         if self.permissions.file_system_read or self.permissions.file_system_write:\n167             mode = \"rw\" if self.permissions.file_system_write else \"ro\"\n168             for host_path in self.permissions.allowed_paths:\n169                 try:\n170                     self._validate_mount_path(host_path)\n171                 except Exception as e:\n172                     logger.error(f\"SECURITY: Refused to mount sensitive host path: {host_path} - {e}\")\n173                     continue\n174                 \n175                 resolved_path = Path(host_path).resolve()\n176                 host_path_str = str(resolved_path)\n177                 \n178 \n179                 container_path = f\"/workspace/{resolved_path.name}\"\n180                 args.extend([\"-v\", f\"{host_path_str}:{container_path}:{mode}\"])\n",
       "col_offset": 23,
       "end_col_offset": 60,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -3764,7 +3764,7 @@
       "code": "189                 \"-e\", f\"DISPLAY={display}\",\n190                 \"-v\", \"/tmp/.X11-unix:/tmp/.X11-unix:ro\"\n191             ])\n192             \n193         import os\n194         auth_key = os.environ.get(\"KERNELL_SANDBOX_AUTH_KEY\")\n",
       "col_offset": 22,
       "end_col_offset": 56,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 377,
@@ -3787,7 +3787,7 @@
       "code": "205             # Remove existing container if present\n206             subprocess.run(\n207                 [\"/usr/bin/docker\", \"rm\", \"-f\", self.container_name],\n208                 capture_output=True, timeout=10\n209             )\n210 \n",
       "col_offset": 12,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3810,7 +3810,7 @@
       "code": "216             logger.info(f\"Docker command: {' '.join(cmd[:6])}...\")  # Log truncated for security\n217             result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)\n218 \n",
       "col_offset": 21,
       "end_col_offset": 84,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3830,7 +3830,7 @@
       "code": "234         try:\n235             subprocess.run(\n236                 [\"/usr/bin/docker\", \"stop\", self.container_name],\n237                 capture_output=True, timeout=30\n238             )\n239             subprocess.run(\n",
       "col_offset": 12,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3853,7 +3853,7 @@
       "code": "238             )\n239             subprocess.run(\n240                 [\"/usr/bin/docker\", \"rm\", self.container_name],\n241                 capture_output=True, timeout=10\n242             )\n243             logger.info(f\"Sandbox {self.container_name} stopped and removed.\")\n",
       "col_offset": 12,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3876,7 +3876,7 @@
       "code": "245             # Force kill\n246             subprocess.run(\n247                 [\"/usr/bin/docker\", \"kill\", self.container_name],\n248                 capture_output=True\n249             )\n250             logger.warning(f\"Sandbox {self.container_name} force-killed.\")\n",
       "col_offset": 12,
       "end_col_offset": 13,
-      "filename": "kernell_os_sdk/sandbox.py",
+      "filename": "kernell_sdk/sandbox.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3899,7 +3899,7 @@
       "code": "19     INTERNAL = \"internal\"\n20     SECRET = \"secret\"\n21     \n",
       "col_offset": 13,
       "end_col_offset": 21,
-      "filename": "kernell_os_sdk/security/intent_firewall.py",
+      "filename": "kernell_sdk/security/intent_firewall.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 259,
@@ -3919,7 +3919,7 @@
       "code": "23     def level(self) -> int:\n24         return {\"public\": 0, \"internal\": 1, \"secret\": 2}[self.value]\n25 \n",
       "col_offset": 44,
       "end_col_offset": 52,
-      "filename": "kernell_os_sdk/security/intent_firewall.py",
+      "filename": "kernell_sdk/security/intent_firewall.py",
       "issue_confidence": "MEDIUM",
       "issue_cwe": {
         "id": 259,
@@ -3939,7 +3939,7 @@
       "code": "1 import subprocess\n2 import json\n3 import os\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "kernell_os_sdk/security/sandbox/sandbox_launcher.py",
+      "filename": "kernell_sdk/security/sandbox/sandbox_launcher.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -3959,7 +3959,7 @@
       "code": "26     \n27     proc = subprocess.Popen(\n28         cmd,\n29         stdin=subprocess.PIPE,\n30         stdout=subprocess.PIPE,\n31         stderr=subprocess.PIPE,\n32         text=True,\n33         close_fds=True\n34     )\n35     \n",
       "col_offset": 11,
       "end_col_offset": 5,
-      "filename": "kernell_os_sdk/security/sandbox/sandbox_launcher.py",
+      "filename": "kernell_sdk/security/sandbox/sandbox_launcher.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,

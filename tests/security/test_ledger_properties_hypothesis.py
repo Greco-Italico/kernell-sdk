@@ -5,8 +5,8 @@ from pathlib import Path
 import pytest
 from hypothesis import given, settings, HealthCheck, strategies as st
 
-from kernell_os_sdk.runtime.firecracker.ledger import AuditLedger
-from kernell_os_sdk.security.kms import LocalKMS
+from kernell_sdk.runtime.firecracker.ledger import AuditLedger
+from kernell_sdk.security.kms import LocalKMS
 
 
 @given(

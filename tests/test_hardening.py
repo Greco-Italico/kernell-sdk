@@ -65,18 +65,18 @@ class TestCommandSafelist:
     @pytest.fixture
     def agent_mock(self):
         """Create a minimal agent mock with _is_command_safe method."""
-        from kernell_os_sdk.agent import Agent
+        from kernell_sdk.agent import Agent
         # We can't instantiate Agent without dependencies, so test the function logic
-        from kernell_os_sdk.constants import COMMAND_SAFELIST
+        from kernell_sdk.constants import COMMAND_SAFELIST
         return COMMAND_SAFELIST
 
     def test_safelist_exists_and_nonempty(self):
-        from kernell_os_sdk.constants import COMMAND_SAFELIST
+        from kernell_sdk.constants import COMMAND_SAFELIST
         assert isinstance(COMMAND_SAFELIST, (set, frozenset))
         assert len(COMMAND_SAFELIST) > 0
 
     def test_dangerous_binaries_not_in_safelist(self):
-        from kernell_os_sdk.constants import COMMAND_SAFELIST
+        from kernell_sdk.constants import COMMAND_SAFELIST
         dangerous = {"rm", "sudo", "nc", "ncat", "dd", "mkfs", "reboot",
                       "shutdown", "mount", "umount", "chown", "chmod",
                       "useradd", "userdel", "passwd", "su"}
@@ -84,14 +84,14 @@ class TestCommandSafelist:
         assert len(overlap) == 0, f"Binarios peligrosos en safelist: {overlap}"
 
     def test_safe_utilities_in_safelist(self):
-        from kernell_os_sdk.constants import COMMAND_SAFELIST
+        from kernell_sdk.constants import COMMAND_SAFELIST
         expected = {"ls", "cat", "echo", "grep", "find", "python", "python3"}
         missing = expected - COMMAND_SAFELIST
         assert len(missing) == 0, f"Utilidades seguras faltantes: {missing}"
 
     def test_blacklist_no_longer_exists(self):
         """COMMAND_BLACKLIST must be removed — safelist replaces it."""
-        import kernell_os_sdk.constants as c
+        import kernell_sdk.constants as c
         assert not hasattr(c, "COMMAND_BLACKLIST"), \
             "COMMAND_BLACKLIST aún existe. Debe ser eliminado a favor de COMMAND_SAFELIST."
 
@@ -104,7 +104,7 @@ class TestRateLimiterLRU:
     """Valida que el RateLimiter no crece sin límite (DoS por memoria)."""
 
     def test_rate_limiter_basic_flow(self):
-        from kernell_os_sdk.constants import RateLimiter
+        from kernell_sdk.constants import RateLimiter
         rl = RateLimiter(max_requests=3, window_seconds=60)
 
         assert rl.is_allowed("client_a")
@@ -113,7 +113,7 @@ class TestRateLimiterLRU:
         assert not rl.is_allowed("client_a"), "4th request should be blocked"
 
     def test_rate_limiter_different_clients_independent(self):
-        from kernell_os_sdk.constants import RateLimiter
+        from kernell_sdk.constants import RateLimiter
         rl = RateLimiter(max_requests=2, window_seconds=60)
 
         assert rl.is_allowed("client_a")
@@ -124,7 +124,7 @@ class TestRateLimiterLRU:
 
     def test_rate_limiter_memory_bounded(self):
         """Inserting 20k unique clients must not keep all in memory."""
-        from kernell_os_sdk.constants import RateLimiter
+        from kernell_sdk.constants import RateLimiter
         rl = RateLimiter(max_requests=100, window_seconds=60)
 
         for i in range(20_000):
@@ -136,7 +136,7 @@ class TestRateLimiterLRU:
 
     def test_rate_limiter_window_reset(self):
         """After window expires, client should be allowed again."""
-        from kernell_os_sdk.constants import RateLimiter
+        from kernell_sdk.constants import RateLimiter
         rl = RateLimiter(max_requests=1, window_seconds=0.3)
 
         assert rl.is_allowed("c1")
@@ -153,19 +153,19 @@ class TestIdentitySalt:
     """Valida que cada instalación genera un salt criptográfico único."""
 
     def test_salt_generated_is_32_bytes(self, tmp_path):
-        from kernell_os_sdk.identity import _get_or_create_salt
+        from kernell_sdk.identity import _get_or_create_salt
         salt = _get_or_create_salt(tmp_path)
         assert isinstance(salt, bytes)
         assert len(salt) == 32
 
     def test_salt_is_persisted(self, tmp_path):
-        from kernell_os_sdk.identity import _get_or_create_salt
+        from kernell_sdk.identity import _get_or_create_salt
         salt1 = _get_or_create_salt(tmp_path)
         salt2 = _get_or_create_salt(tmp_path)
         assert salt1 == salt2, "Salt should be read from disk on second call"
 
     def test_different_dirs_get_different_salts(self, tmp_path):
-        from kernell_os_sdk.identity import _get_or_create_salt
+        from kernell_sdk.identity import _get_or_create_salt
         dir_a = tmp_path / "agent_a"
         dir_b = tmp_path / "agent_b"
         dir_a.mkdir()
@@ -175,7 +175,7 @@ class TestIdentitySalt:
         assert salt_a != salt_b, "Different agents must have different salts"
 
     def test_salt_file_permissions(self, tmp_path):
-        from kernell_os_sdk.identity import _get_or_create_salt
+        from kernell_sdk.identity import _get_or_create_salt
         _get_or_create_salt(tmp_path)
         import stat
         salt_path = tmp_path / ".key_salt"
@@ -191,16 +191,16 @@ class TestDockerImagePinning:
     """Valida que la imagen Docker usa digest, no tag mutable."""
 
     def test_image_uses_digest_not_tag(self):
-        from kernell_os_sdk.sandbox import AGENT_BASE_IMAGE
+        from kernell_sdk.sandbox import AGENT_BASE_IMAGE
         assert "@sha256:" in AGENT_BASE_IMAGE, \
             f"AGENT_BASE_IMAGE debe usar digest (@sha256:...), no tag. Actual: {AGENT_BASE_IMAGE}"
 
     def test_tag_reference_still_available(self):
-        from kernell_os_sdk.sandbox import AGENT_BASE_IMAGE_TAG
+        from kernell_sdk.sandbox import AGENT_BASE_IMAGE_TAG
         assert ":latest" in AGENT_BASE_IMAGE_TAG or ":" in AGENT_BASE_IMAGE_TAG
 
     def test_verify_function_exists(self):
-        from kernell_os_sdk.sandbox import _verify_image_integrity
+        from kernell_sdk.sandbox import _verify_image_integrity
         assert callable(_verify_image_integrity)
 
 
@@ -247,29 +247,29 @@ class TestWalletAddressValidation:
     """Valida que wallet rechaza direcciones con formato inválido."""
 
     def test_regex_rejects_path_traversal(self):
-        from kernell_os_sdk.wallet import _WALLET_ADDR_RE
+        from kernell_sdk.wallet import _WALLET_ADDR_RE
         assert not _WALLET_ADDR_RE.match("../../etc/passwd")
         assert not _WALLET_ADDR_RE.match("/etc/passwd")
         assert not _WALLET_ADDR_RE.match("addr/../admin")
 
     def test_regex_rejects_injection(self):
-        from kernell_os_sdk.wallet import _WALLET_ADDR_RE
+        from kernell_sdk.wallet import _WALLET_ADDR_RE
         assert not _WALLET_ADDR_RE.match("addr;DROP TABLE")
         assert not _WALLET_ADDR_RE.match("addr' OR '1'='1")
         assert not _WALLET_ADDR_RE.match("<script>alert(1)</script>")
 
     def test_regex_accepts_valid_addresses(self):
-        from kernell_os_sdk.wallet import _WALLET_ADDR_RE
+        from kernell_sdk.wallet import _WALLET_ADDR_RE
         assert _WALLET_ADDR_RE.match("kern_vol_abc123def456")
         assert _WALLET_ADDR_RE.match("0x1234567890abcdef")
         assert _WALLET_ADDR_RE.match("agent-wallet-main")
 
     def test_regex_rejects_too_short(self):
-        from kernell_os_sdk.wallet import _WALLET_ADDR_RE
+        from kernell_sdk.wallet import _WALLET_ADDR_RE
         assert not _WALLET_ADDR_RE.match("short")
 
     def test_regex_rejects_too_long(self):
-        from kernell_os_sdk.wallet import _WALLET_ADDR_RE
+        from kernell_sdk.wallet import _WALLET_ADDR_RE
         assert not _WALLET_ADDR_RE.match("a" * 200)
 
 
@@ -281,7 +281,7 @@ class TestBudgetThreadSafety:
     """Valida que TokenBudget es thread-safe bajo acceso concurrente."""
 
     def test_concurrent_record_no_data_loss(self):
-        from kernell_os_sdk.budget import TokenBudget
+        from kernell_sdk.budget import TokenBudget
         budget = TokenBudget(agent_name="test", hourly_limit=1_000_000, daily_limit=10_000_000)
 
         errors = []
@@ -304,7 +304,7 @@ class TestBudgetThreadSafety:
             f"Expected 10000 tokens, got {snap.total_used} — race condition detected"
 
     def test_has_lock_attribute(self):
-        from kernell_os_sdk.budget import TokenBudget
+        from kernell_sdk.budget import TokenBudget
         budget = TokenBudget()
         assert hasattr(budget, "_lock"), "TokenBudget must have a threading lock"
 
@@ -317,7 +317,7 @@ class TestSandboxMountBlocking:
     """Valida que el sandbox rechaza montar rutas sensibles."""
 
     def test_forbidden_paths_blocked(self):
-        from kernell_os_sdk.sandbox import Sandbox, ResourceLimits, AgentPermissions
+        from kernell_sdk.sandbox import Sandbox, ResourceLimits, AgentPermissions
         perms = AgentPermissions(
             file_system_read=True,
             allowed_paths=["/etc", "/root/.ssh", "/var/run/docker.sock"]
@@ -330,7 +330,7 @@ class TestSandboxMountBlocking:
         assert "docker.sock" not in args_str, "Should not mount docker.sock"
 
     def test_safe_path_allowed(self):
-        from kernell_os_sdk.sandbox import Sandbox, ResourceLimits, AgentPermissions
+        from kernell_sdk.sandbox import Sandbox, ResourceLimits, AgentPermissions
         home = str(Path.home() / "Documents")
         perms = AgentPermissions(
             file_system_read=True,
@@ -342,7 +342,7 @@ class TestSandboxMountBlocking:
         assert "Documents" in args_str, "Safe path should be mounted"
 
     def test_root_mount_blocked(self):
-        from kernell_os_sdk.sandbox import Sandbox, ResourceLimits, AgentPermissions
+        from kernell_sdk.sandbox import Sandbox, ResourceLimits, AgentPermissions
         perms = AgentPermissions(
             file_system_read=True,
             allowed_paths=["/"]
@@ -364,13 +364,13 @@ class TestVersionConsistency:
     """Valida que la versión se lee de metadata, no hardcodeada."""
 
     def test_version_is_string(self):
-        import kernell_os_sdk
-        assert isinstance(kernell_os_sdk.__version__, str)
+        import kernell_sdk
+        assert isinstance(kernell_sdk.__version__, str)
 
     def test_version_not_hardcoded_050(self):
         """The old v0.5.0 string should be gone."""
-        import kernell_os_sdk
-        assert kernell_os_sdk.__version__ != "0.5.0"
+        import kernell_sdk
+        assert kernell_sdk.__version__ != "0.5.0"
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -383,18 +383,18 @@ class TestConsolidation:
     def test_gui_imports_from_constants(self):
         """gui.py should NOT define its own VALID_PERMISSIONS."""
         import inspect
-        import kernell_os_sdk.gui as gui_module
+        import kernell_sdk.gui as gui_module
         source = inspect.getsource(gui_module)
         # Should import from constants, not redefine
-        assert "from .constants import" in source or "from kernell_os_sdk.constants import" in source
+        assert "from .constants import" in source or "from kernell_sdk.constants import" in source
 
     def test_dashboard_imports_from_constants(self):
         import inspect
-        import kernell_os_sdk.dashboard as dash_module
+        import kernell_sdk.dashboard as dash_module
         source = inspect.getsource(dash_module)
-        assert "from .constants import" in source or "from kernell_os_sdk.constants import" in source
+        assert "from .constants import" in source or "from kernell_sdk.constants import" in source
 
     def test_constants_is_single_source_of_truth(self):
-        from kernell_os_sdk.constants import VALID_PERMISSIONS, RateLimiter
+        from kernell_sdk.constants import VALID_PERMISSIONS, RateLimiter
         assert isinstance(VALID_PERMISSIONS, (set, frozenset))
         assert callable(RateLimiter)

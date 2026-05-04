@@ -93,14 +93,14 @@ echo "▸ Security Configs"
 SDK_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 check "nsjail.cfg exists" test -f "${SDK_ROOT}/nsjail.cfg"
 check "seccomp_kernell.policy exists" test -f "${SDK_ROOT}/seccomp_kernell.policy"
-check "seccomp_agent.json exists" test -f "${SDK_ROOT}/kernell_os_sdk/seccomp_agent.json"
+check "seccomp_agent.json exists" test -f "${SDK_ROOT}/kernell_sdk/seccomp_agent.json"
 
 # ── 6. Python SDK importable ─────────────────────────────────
 echo "▸ SDK Health"
-check "SDK importable" python3 -c "import kernell_os_sdk"
-check "Firecracker runtime importable" python3 -c "from kernell_os_sdk.runtime.firecracker_runtime import FirecrackerRuntime"
-check "Integrity module importable" python3 -c "from kernell_os_sdk.runtime.firecracker.integrity import verify_artifacts"
-check "cgroup limiter importable" python3 -c "from kernell_os_sdk.runtime.firecracker.cgroup_limiter import VMResourceLimiter"
+check "SDK importable" python3 -c "import kernell_sdk"
+check "Firecracker runtime importable" python3 -c "from kernell_sdk.runtime.firecracker_runtime import FirecrackerRuntime"
+check "Integrity module importable" python3 -c "from kernell_sdk.runtime.firecracker.integrity import verify_artifacts"
+check "cgroup limiter importable" python3 -c "from kernell_sdk.runtime.firecracker.cgroup_limiter import VMResourceLimiter"
 
 # ── 7. Network / Ports ───────────────────────────────────────
 echo "▸ Network"
@@ -132,7 +132,7 @@ sys.path.insert(0, '${SDK_ROOT}')
 # Record baseline FDs
 baseline_fds = len(os.listdir('/proc/self/fd'))
 
-from kernell_os_sdk.runtime.sandbox import validate_code, SandboxViolation
+from kernell_sdk.runtime.sandbox import validate_code, SandboxViolation
 
 # Sequential: 100 valid payloads
 errors = 0

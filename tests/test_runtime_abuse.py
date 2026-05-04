@@ -1,7 +1,7 @@
 import os
 import shutil
 import pytest
-from kernell_os_sdk.runtime import SubprocessRuntime, DockerRuntime, ExecutionRequest, SandboxViolation
+from kernell_sdk.runtime import SubprocessRuntime, DockerRuntime, ExecutionRequest, SandboxViolation
 
 def has_docker():
     return shutil.which("docker") is not None

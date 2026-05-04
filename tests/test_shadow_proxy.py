@@ -8,7 +8,7 @@ import time
 import pytest
 from unittest.mock import MagicMock
 
-from kernell_os_sdk.shadow.proxy import (
+from kernell_sdk.shadow.proxy import (
     ShadowProxy, ShadowConfig, ShadowEvent, API_PRICING,
 )
 

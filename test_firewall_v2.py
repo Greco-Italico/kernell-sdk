@@ -1,4 +1,4 @@
-from kernell_os_sdk.cognitive.intent_firewall import (
+from kernell_sdk.cognitive.intent_firewall import (
     IntentFirewall, AgentIntent, ActionType, TaintLevel, Capability
 )
 import base64

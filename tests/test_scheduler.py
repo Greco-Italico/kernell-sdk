@@ -1,6 +1,6 @@
 import pytest
 import asyncio
-from kernell_os_sdk.runtime.scheduler import Scheduler, WorkerState
+from kernell_sdk.runtime.scheduler import Scheduler, WorkerState
 
 class DummyMetrics:
     def inc(self, *args, **kwargs): pass

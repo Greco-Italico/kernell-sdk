@@ -4,7 +4,7 @@ import hashlib
 import pytest
 import json
 
-from kernell_os_sdk.security.iam import (
+from kernell_sdk.security.iam import (
     VaultBackend,
     NamespacedVault,
     IAMPolicyEngine,

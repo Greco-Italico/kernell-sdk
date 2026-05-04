@@ -1,7 +1,7 @@
 import json
 
-from kernell_os_sdk.router.policy_lite import PolicyLiteClient
-from kernell_os_sdk.router.types import PolicyRoute, RiskLevel
+from kernell_sdk.router.policy_lite import PolicyLiteClient
+from kernell_sdk.router.types import PolicyRoute, RiskLevel
 
 
 class FakePolicyLLM:

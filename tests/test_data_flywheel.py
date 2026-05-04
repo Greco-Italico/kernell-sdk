@@ -7,13 +7,13 @@ import time
 import pytest
 from unittest.mock import MagicMock, patch
 
-from kernell_os_sdk.router.telemetry_collector import (
+from kernell_sdk.router.telemetry_collector import (
     TelemetryCollector, TelemetryConfig, TelemetryEvent,
 )
-from kernell_os_sdk.router.classifier_pro import (
+from kernell_sdk.router.classifier_pro import (
     ClassifierProClient, ClassifierProConfig, ProClassification,
 )
-from kernell_os_sdk.router.types import ModelTier, ExecutionResult
+from kernell_sdk.router.types import ModelTier, ExecutionResult
 
 
 # ═══════════════════════════════════════════════════════════════════════════

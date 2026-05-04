@@ -4,11 +4,11 @@ import types
 
 import pytest
 
-from kernell_os_sdk.escrow.manager import EscrowManager, EscrowState
-from kernell_os_sdk.runtime.firecracker.auth_protocol import AuthenticatedFrame
-from kernell_os_sdk.runtime.firecracker_runtime import FirecrackerRuntime
-from kernell_os_sdk.runtime.models import ExecutionRequest
-from kernell_os_sdk.runtime.firecracker import server as firecracker_server
+from kernell_sdk.escrow.manager import EscrowManager, EscrowState
+from kernell_sdk.runtime.firecracker.auth_protocol import AuthenticatedFrame
+from kernell_sdk.runtime.firecracker_runtime import FirecrackerRuntime
+from kernell_sdk.runtime.models import ExecutionRequest
+from kernell_sdk.runtime.firecracker import server as firecracker_server
 
 
 class _FakeSocket:
@@ -32,14 +32,14 @@ def test_response_context_mismatch_rejected(monkeypatch):
     monkeypatch.setenv("FC_VSOCK_SHARED_SECRET_B64", secret)
     rt = FirecrackerRuntime(kernel_path="/vmlinux", rootfs_path="/rootfs.ext4")
 
-    monkeypatch.setattr("kernell_os_sdk.runtime.firecracker_runtime.socket.socket", _FakeSocket)
-    monkeypatch.setattr("kernell_os_sdk.runtime.firecracker_runtime.prom.VSOCK_CONNECT_LATENCY.observe", lambda *_: None)
+    monkeypatch.setattr("kernell_sdk.runtime.firecracker_runtime.socket.socket", _FakeSocket)
+    monkeypatch.setattr("kernell_sdk.runtime.firecracker_runtime.prom.VSOCK_CONNECT_LATENCY.observe", lambda *_: None)
     monkeypatch.setattr(
-        "kernell_os_sdk.runtime.firecracker_runtime.recv_len_prefixed",
+        "kernell_sdk.runtime.firecracker_runtime.recv_len_prefixed",
         lambda _sock: b'{"v":1,"ts":1,"nid":"x","tid":"attacker","rid":"wrong","pay":"","meta":{},"sig":"x"}',
     )
     monkeypatch.setattr(
-        "kernell_os_sdk.runtime.firecracker_runtime.AuthenticatedFrame.from_wire",
+        "kernell_sdk.runtime.firecracker_runtime.AuthenticatedFrame.from_wire",
         lambda _b, _k: AuthenticatedFrame(
             version=1,
             timestamp=1.0,
@@ -121,7 +121,7 @@ def test_every_escrow_transition_emits_event():
     )
 
     from unittest.mock import patch
-    with patch("kernell_os_sdk.escrow.manager._now", return_value=1.0):
+    with patch("kernell_sdk.escrow.manager._now", return_value=1.0):
         fund_intent = {"action": "FUND", "contract_id": cid, "expected_prev_state": "CREATED", "nonce": "n2", "ts": 1.0}
         m.fund_escrow(cid, actor_id="buyer", expected_prev_state=EscrowState.CREATED, nonce="n2", signature_hex=sign(b_priv, fund_intent))
         lock_intent = {"action": "LOCK", "contract_id": cid, "expected_prev_state": "FUNDED", "nonce": "n3", "ts": 1.0}
@@ -181,9 +181,9 @@ def test_control_plane_requires_authorization_header():
 def test_no_silent_pass_in_critical_security_modules():
     modules = [
         firecracker_server,
-        __import__("kernell_os_sdk.runtime.firecracker.auth_protocol", fromlist=["*"]),
-        __import__("kernell_os_sdk.runtime.firecracker_runtime", fromlist=["*"]),
-        __import__("kernell_os_sdk.escrow.manager", fromlist=["*"]),
+        __import__("kernell_sdk.runtime.firecracker.auth_protocol", fromlist=["*"]),
+        __import__("kernell_sdk.runtime.firecracker_runtime", fromlist=["*"]),
+        __import__("kernell_sdk.escrow.manager", fromlist=["*"]),
     ]
     for mod in modules:
         src = inspect.getsource(mod)

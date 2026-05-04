@@ -74,11 +74,11 @@ def test_webhook_signature_and_replay_realistic(mock_stripe_env):
     assert res2.status_code == 409, "VULNERABILIDAD REPLAY: Se procesó el mismo evento dos veces!"
 
 import threading
-from kernell_os_sdk.escrow.manager import EscrowManager, EscrowState, EscrowError
+from kernell_sdk.escrow.manager import EscrowManager, EscrowState, EscrowError
 
 def test_escrow_double_spend_race(monkeypatch, tmp_path):
     # Mock signature verification para centrarnos en la concurrencia
-    monkeypatch.setattr("kernell_os_sdk.escrow.manager._verify_actor_signature", lambda pub, msg, sig: True)
+    monkeypatch.setattr("kernell_sdk.escrow.manager._verify_actor_signature", lambda pub, msg, sig: True)
     
     db_path = str(tmp_path / "escrow.sqlite3")
     
@@ -137,7 +137,7 @@ import math
     1e309, # overflow
 ])
 def test_escrow_numeric_abuse(monkeypatch, tmp_path, amount):
-    monkeypatch.setattr("kernell_os_sdk.escrow.manager._verify_actor_signature", lambda pub, msg, sig: True)
+    monkeypatch.setattr("kernell_sdk.escrow.manager._verify_actor_signature", lambda pub, msg, sig: True)
     db_path = str(tmp_path / "escrow.sqlite3")
     manager = EscrowManager(db_path)
     manager.register_actor_key("buyer1", "0" * 64)
@@ -211,7 +211,7 @@ def test_partial_journal_insertion(tmp_path, monkeypatch):
     assert balance_a == 0, f"Ledger corrupto: inserción parcial detectada. Balance de A es {balance_a}"
 
 def test_escrow_matches_ledger_and_global_invariant(tmp_path, monkeypatch):
-    monkeypatch.setattr("kernell_os_sdk.escrow.manager._verify_actor_signature", lambda pub, msg, sig: True)
+    monkeypatch.setattr("kernell_sdk.escrow.manager._verify_actor_signature", lambda pub, msg, sig: True)
     
     db_path = str(tmp_path / "escrow.sqlite3")
     ledger_path = str(tmp_path / "ledger.sqlite3")

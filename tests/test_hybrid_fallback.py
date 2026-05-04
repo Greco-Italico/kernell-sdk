@@ -1,15 +1,15 @@
 import pytest
 import time
 from unittest.mock import patch, MagicMock
-from kernell_os_sdk.runtime import HybridRuntime, HybridRuntimeConfig, ExecutionMode
-from kernell_os_sdk.runtime.models import ExecutionRequest, ExecutionResult
-from kernell_os_sdk.runtime.errors import ExecutionTimeout
+from kernell_sdk.runtime import HybridRuntime, HybridRuntimeConfig, ExecutionMode
+from kernell_sdk.runtime.models import ExecutionRequest, ExecutionResult
+from kernell_sdk.runtime.errors import ExecutionTimeout
 
 @pytest.fixture
 def mock_runtimes():
-    with patch('kernell_os_sdk.runtime.hybrid_runtime.DockerRuntime') as MockDocker, \
-         patch('kernell_os_sdk.runtime.hybrid_runtime.FirecrackerRuntime') as MockFC, \
-         patch('kernell_os_sdk.runtime.hybrid_runtime.SubprocessRuntime') as MockSub:
+    with patch('kernell_sdk.runtime.hybrid_runtime.DockerRuntime') as MockDocker, \
+         patch('kernell_sdk.runtime.hybrid_runtime.FirecrackerRuntime') as MockFC, \
+         patch('kernell_sdk.runtime.hybrid_runtime.SubprocessRuntime') as MockSub:
         
         # Configure standard success mocks
         fc_instance = MockFC.return_value

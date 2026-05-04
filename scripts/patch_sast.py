@@ -2,7 +2,7 @@ import os
 import re
 import shutil
 
-SDK_DIR = "/home/anny/kernell-os/kernell-os-sdk/kernell_os_sdk"
+SDK_DIR = "/home/anny/kernell-os/kernell-os-sdk/kernell_sdk"
 
 def patch_shutil_which():
     """Patches subprocess calls to use shutil.which for absolute paths."""

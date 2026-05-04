@@ -6,7 +6,7 @@ from hypothesis import given, settings, strategies as st
 from cryptography.hazmat.primitives.asymmetric import ed25519
 from cryptography.hazmat.primitives import serialization
 
-from kernell_os_sdk.escrow.manager import (
+from kernell_sdk.escrow.manager import (
     EscrowManager,
     EscrowState,
     Unauthorized,

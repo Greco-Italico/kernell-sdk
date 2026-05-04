@@ -7,7 +7,7 @@ set -e
 
 PYTHON="${VIRTUAL_ENV:-/home/anny/kernell-os/.venv}/bin/python"
 CHECKER="/home/anny/kernell-os/verifier/adapter_compliance_checker.py"
-ADAPTERS="/home/anny/kernell-os/kernell-os-sdk/kernell_os_sdk/adapters"
+ADAPTERS="/home/anny/kernell-os/kernell-os-sdk/kernell_sdk/adapters"
 
 echo "🔍 [pre-commit] Running Adapter Compliance Checker..."
 

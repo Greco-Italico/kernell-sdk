@@ -20,14 +20,14 @@ class TestCommandInjection:
     ]
 
     def test_sandbox_validation_rejects_payloads(self):
-        from kernell_os_sdk.runtime.sandbox import validate_code, SandboxViolation
+        from kernell_sdk.runtime.sandbox import validate_code, SandboxViolation
         
         for payload in self.INJECTION_PAYLOADS:
             with pytest.raises(SandboxViolation):
                 validate_code(f"import os; os.system('{payload}')")
 
     def test_sandbox_rejects_dunders(self):
-        from kernell_os_sdk.runtime.sandbox import validate_code, SandboxViolation
+        from kernell_sdk.runtime.sandbox import validate_code, SandboxViolation
         with pytest.raises(SandboxViolation):
             validate_code("__builtins__.__dict__['eval']('print(1)')")
 
@@ -39,7 +39,7 @@ class TestCommandInjection:
 class TestDashboardAuthentication:
     @pytest.fixture
     def app_and_client(self):
-        from kernell_os_sdk.dashboard import CommandCenter
+        from kernell_sdk.dashboard import CommandCenter
         from fastapi.testclient import TestClient
         
         class MockAgent:
@@ -102,21 +102,21 @@ class TestCryptoIntegrity:
 
     @pytest.fixture
     def kdf_fast(self):
-        from kernell_os_sdk.crypto import KDFPreset
+        from kernell_sdk.crypto import KDFPreset
         return KDFPreset.FAST
 
     @pytest.fixture
     def sealed_envelope(self, kdf_fast):
-        from kernell_os_sdk.crypto import encrypt_private_key
+        from kernell_sdk.crypto import encrypt_private_key
         return encrypt_private_key(self.FAKE_KEY, self.PASSPHRASE, self.AAD, kdf_fast)
 
     def test_seal_and_unseal_roundtrip(self, sealed_envelope):
-        from kernell_os_sdk.crypto import decrypt_private_key
+        from kernell_sdk.crypto import decrypt_private_key
         recovered = decrypt_private_key(sealed_envelope, self.PASSPHRASE, self.AAD)
         assert recovered == self.FAKE_KEY
 
     def test_tampered_ciphertext_rejected(self, sealed_envelope):
-        from kernell_os_sdk.crypto import decrypt_private_key, EncryptedKeyEnvelope
+        from kernell_sdk.crypto import decrypt_private_key, EncryptedKeyEnvelope
         from cryptography.exceptions import InvalidTag
 
         # Flip a bit in the ciphertext
@@ -131,14 +131,14 @@ class TestCryptoIntegrity:
             decrypt_private_key(tampered, self.PASSPHRASE, self.AAD)
 
     def test_wrong_passphrase_rejected(self, sealed_envelope):
-        from kernell_os_sdk.crypto import decrypt_private_key
+        from kernell_sdk.crypto import decrypt_private_key
         from cryptography.exceptions import InvalidTag
 
         with pytest.raises(InvalidTag):
             decrypt_private_key(sealed_envelope, "wrong-passphrase", self.AAD)
 
     def test_each_seal_produces_different_ciphertext(self, kdf_fast):
-        from kernell_os_sdk.crypto import encrypt_private_key
+        from kernell_sdk.crypto import encrypt_private_key
 
         env1 = encrypt_private_key(self.FAKE_KEY, self.PASSPHRASE, self.AAD, kdf_fast)
         env2 = encrypt_private_key(self.FAKE_KEY, self.PASSPHRASE, self.AAD, kdf_fast)

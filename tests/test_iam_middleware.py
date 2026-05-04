@@ -6,12 +6,12 @@ import pytest
 from fastapi import FastAPI, Request
 from fastapi.testclient import TestClient
 
-from kernell_os_sdk.security.iam import (
+from kernell_sdk.security.iam import (
     VaultBackend,
     NamespacedVault,
     IAMPolicyEngine,
 )
-from kernell_os_sdk.security.middleware import IAMSecurityMiddleware
+from kernell_sdk.security.middleware import IAMSecurityMiddleware
 
 def sign_request(tenant_id: str, agent_id: str, secret: str, body: str, timestamp: int, method: str = "POST", path: str = "/test") -> str:
     return hmac.new(

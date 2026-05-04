@@ -2,9 +2,9 @@ import pytest
 import time
 import secrets
 import hashlib
-from kernell_os_sdk.security.kms import LocalKMS
-from kernell_os_sdk.security import Capability, CapabilityToken, CapabilitySigner, CapabilityVerifier, CapabilityPolicyEngine
-from kernell_os_sdk.runtime.models import ExecutionRequest
+from kernell_sdk.security.kms import LocalKMS
+from kernell_sdk.security import Capability, CapabilityToken, CapabilitySigner, CapabilityVerifier, CapabilityPolicyEngine
+from kernell_sdk.runtime.models import ExecutionRequest
 
 @pytest.fixture
 def keys():

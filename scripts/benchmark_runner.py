@@ -13,8 +13,8 @@ from pathlib import Path
 from scripts.baseline_openai import OpenAIBaseline
 from scripts.quality import quality_score as heuristic_score
 from scripts.quality_llm import llm_judge_score
-from kernell_os_sdk.router import IntelligentRouter
-from kernell_os_sdk.router import TelemetryCollector, TelemetryConfig
+from kernell_sdk.router import IntelligentRouter
+from kernell_sdk.router import TelemetryCollector, TelemetryConfig
 
 USE_LLM_JUDGE = os.environ.get("BENCH_USE_LLM_JUDGE", "1") == "1"
 

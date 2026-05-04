@@ -6,10 +6,10 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
-from kernell_os_sdk.billing.metering import MeteringEngine
-from kernell_os_sdk.billing.pricing import PricingEngine
-from kernell_os_sdk.billing.spend_guard import SpendGuard
-from kernell_os_sdk.billing.observability import FinancialObserver
+from kernell_sdk.billing.metering import MeteringEngine
+from kernell_sdk.billing.pricing import PricingEngine
+from kernell_sdk.billing.spend_guard import SpendGuard
+from kernell_sdk.billing.observability import FinancialObserver
 from core.audit.double_entry_ledger import DoubleEntryLedger
 
 

@@ -19,17 +19,17 @@ import time
 import pytest
 from unittest.mock import MagicMock
 
-from kernell_os_sdk.router.types import (
+from kernell_sdk.router.types import (
     SubTask, ExecutionResult, DifficultyLevel, ModelTier, TaskDomain, RouterStats,
 )
-from kernell_os_sdk.router.decomposer import TaskDecomposer, DecomposerTrainingCollector
-from kernell_os_sdk.router.verifier import SelfVerifier, VerificationResult
-from kernell_os_sdk.router.summarizer import RollingSummarizer
-from kernell_os_sdk.router.model_registry import ModelRegistry, DEFAULT_CATALOG
-from kernell_os_sdk.router.metrics import RouterMetricsCollector
-from kernell_os_sdk.router.estimator import CostEstimator
-from kernell_os_sdk.router.intelligent_router import IntelligentRouter
-from kernell_os_sdk.router.entrypoint import RouterEntrypoint, RouterConfig
+from kernell_sdk.router.decomposer import TaskDecomposer, DecomposerTrainingCollector
+from kernell_sdk.router.verifier import SelfVerifier, VerificationResult
+from kernell_sdk.router.summarizer import RollingSummarizer
+from kernell_sdk.router.model_registry import ModelRegistry, DEFAULT_CATALOG
+from kernell_sdk.router.metrics import RouterMetricsCollector
+from kernell_sdk.router.estimator import CostEstimator
+from kernell_sdk.router.intelligent_router import IntelligentRouter
+from kernell_sdk.router.entrypoint import RouterEntrypoint, RouterConfig
 
 
 # ── Fixtures ─────────────────────────────────────────────────────────────

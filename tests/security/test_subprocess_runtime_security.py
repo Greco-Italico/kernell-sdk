@@ -3,8 +3,8 @@ import os
 
 import pytest
 
-from kernell_os_sdk.identity import SecurityError
-from kernell_os_sdk.runtime import SubprocessRuntime
+from kernell_sdk.identity import SecurityError
+from kernell_sdk.runtime import SubprocessRuntime
 
 
 def test_subprocess_forbidden_in_production():

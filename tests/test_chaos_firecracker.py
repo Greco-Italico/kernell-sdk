@@ -4,10 +4,10 @@ import os
 import threading
 from unittest.mock import MagicMock, patch
 
-from kernell_os_sdk.runtime.models import ExecutionRequest
-from kernell_os_sdk.runtime.firecracker_runtime import FirecrackerRuntime
-from kernell_os_sdk.runtime.firecracker.resilience import CircuitOpenError
-from kernell_os_sdk.runtime.firecracker import metrics as prom
+from kernell_sdk.runtime.models import ExecutionRequest
+from kernell_sdk.runtime.firecracker_runtime import FirecrackerRuntime
+from kernell_sdk.runtime.firecracker.resilience import CircuitOpenError
+from kernell_sdk.runtime.firecracker import metrics as prom
 
 # ══════════════════════════════════════════════════════════════════════════════
 # CHAOS GUARDRAILS: Kill switch & Staging validation
@@ -36,10 +36,10 @@ class TestChaosFirecracker:
     @pytest.fixture
     def runtime(self):
         """Fixture de FirecrackerRuntime con dependencias mockeadas para simular infraestructura."""
-        with patch("kernell_os_sdk.runtime.firecracker_runtime.FirecrackerManager"), \
-             patch("kernell_os_sdk.runtime.firecracker_runtime.TenantManager"), \
-             patch("kernell_os_sdk.runtime.firecracker_runtime.BillingManager"), \
-             patch("kernell_os_sdk.runtime.firecracker_runtime.LocalKMS"):
+        with patch("kernell_sdk.runtime.firecracker_runtime.FirecrackerManager"), \
+             patch("kernell_sdk.runtime.firecracker_runtime.TenantManager"), \
+             patch("kernell_sdk.runtime.firecracker_runtime.BillingManager"), \
+             patch("kernell_sdk.runtime.firecracker_runtime.LocalKMS"):
             
             rt = FirecrackerRuntime("/fake/vmlinux", "/fake/rootfs", "/tmp/fcsnapshots")
             # Bypass billing/admission control for chaos logic testing
@@ -114,7 +114,7 @@ class TestChaosFirecracker:
         Fase 3: Simula un payload manipulado interceptado en tránsito (o HMAC inválido).
         Valida que el sistema aborta la ejecución criptográfica inmediatamente.
         """
-        from kernell_os_sdk.runtime.firecracker.auth_protocol import AuthenticationError
+        from kernell_sdk.runtime.firecracker.auth_protocol import AuthenticationError
         
         mock_vm = MagicMock(vm_id="vm_chaos_2")
         runtime.pool_breaker.call = MagicMock(return_value=(mock_vm, False))

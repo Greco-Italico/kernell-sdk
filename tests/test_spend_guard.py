@@ -8,7 +8,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
-from kernell_os_sdk.billing.spend_guard import SpendGuard
+from kernell_sdk.billing.spend_guard import SpendGuard
 
 
 def test_concurrent_spend_exactly_n_pass(tmp_path):

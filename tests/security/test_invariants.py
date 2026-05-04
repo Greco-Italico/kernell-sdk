@@ -7,7 +7,7 @@ from cryptography.hazmat.primitives.asymmetric import ed25519
 from cryptography.hazmat.primitives import serialization
 
 # VSOCK Protocol Imports
-from kernell_os_sdk.runtime.firecracker.auth_protocol import (
+from kernell_sdk.runtime.firecracker.auth_protocol import (
     AuthenticatedFrame,
     ReplayAttackError,
     AuthenticationError,
@@ -16,13 +16,13 @@ from kernell_os_sdk.runtime.firecracker.auth_protocol import (
 )
 
 try:
-    from kernell_os_sdk.runtime.firecracker_runtime import FirecrackerRuntime
+    from kernell_sdk.runtime.firecracker_runtime import FirecrackerRuntime
     HAS_RUNTIME = True
 except ImportError:
     HAS_RUNTIME = False
 
 # Escrow Imports
-from kernell_os_sdk.escrow.manager import EscrowManager, EscrowState, Unauthorized, InvalidTransition, ReplayDetected, InvalidSignature
+from kernell_sdk.escrow.manager import EscrowManager, EscrowState, Unauthorized, InvalidTransition, ReplayDetected, InvalidSignature
 
 import sqlite3
 
@@ -148,7 +148,7 @@ def test_invalid_state_transition(escrow):
     }
     escrow.create_escrow(buyer_id="buyer", seller_id="seller", amount=100.0, contract_id="c2", nonce="n1", signature_hex=sign_intent(priv, intent1))
     
-    with patch("kernell_os_sdk.escrow.manager._now", return_value=1000.0):
+    with patch("kernell_sdk.escrow.manager._now", return_value=1000.0):
         # Current state is CREATED. Try to RELEASE (which requires LOCKED)
         intent2 = {
             "action": "RELEASE", "contract_id": "c2", "expected_prev_state": "LOCKED",
@@ -169,7 +169,7 @@ def test_hash_chain_integrity(escrow):
     }
     escrow.create_escrow(buyer_id="buyer", seller_id="seller", amount=100.0, contract_id="c3", nonce="n1", signature_hex=sign_intent(priv, intent1))
     
-    with patch("kernell_os_sdk.escrow.manager._now", return_value=1000.0):
+    with patch("kernell_sdk.escrow.manager._now", return_value=1000.0):
         intent2 = {
             "action": "FUND", "contract_id": "c3",
             "expected_prev_state": "CREATED", "nonce": "n2", "ts": 1000.0

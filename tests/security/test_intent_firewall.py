@@ -1,6 +1,6 @@
 import pytest
 import json
-from kernell_os_sdk.security.intent_firewall import (
+from kernell_sdk.security.intent_firewall import (
     PlanIR, PlanStep, DataRef, ActionType, DataSensitivity,
     DataSourceType, DataSinkType, PlanValidator
 )
@@ -140,7 +140,7 @@ def test_validator_source_forgery():
 
 import time
 from cryptography.hazmat.primitives.asymmetric import ed25519
-from kernell_os_sdk.security.intent_firewall import (
+from kernell_sdk.security.intent_firewall import (
     TokenAuthority, CapabilityToken, OrchestratorStub,
     PlanDriftError, InvalidCapabilityToken, UnsupportedActionError
 )

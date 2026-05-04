@@ -121,7 +121,7 @@ echo -e "   ${DIM}   Agent ID: $AGENT_ID${NC}"
 echo -e "${BLUE}[4/5]${NC} Verifying installation..."
 
 python3 -c "
-from kernell_os_sdk.shadow import ShadowProxy, ShadowConfig
+from kernell_sdk.shadow import ShadowProxy, ShadowConfig
 proxy = ShadowProxy(ShadowConfig(agent_id='$AGENT_ID'))
 print('   ✅ Shadow Proxy OK')
 print(f'   ✅ Log dir: {proxy._config.log_dir}')
@@ -145,7 +145,7 @@ echo ""
 echo -e "${BOLD}  Activate with ONE line in your code:${NC}"
 echo ""
 echo -e "  ${DIM}# Add this at the top of your main script:${NC}"
-echo -e "  ${GREEN}from kernell_os_sdk.shadow.proxy import patch_openai${NC}"
+echo -e "  ${GREEN}from kernell_sdk.shadow.proxy import patch_openai${NC}"
 echo -e "  ${GREEN}patch_openai()${NC}"
 echo ""
 echo -e "  ${DIM}# That's it. Your code runs exactly the same.${NC}"

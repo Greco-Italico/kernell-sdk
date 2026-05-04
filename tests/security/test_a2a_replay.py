@@ -3,7 +3,7 @@ import time
 
 import pytest
 
-from kernell_os_sdk.security.a2a_replay import A2AReplayGuard, A2AReplayError
+from kernell_sdk.security.a2a_replay import A2AReplayGuard, A2AReplayError
 
 
 def test_nonce_reuse_rejected():
