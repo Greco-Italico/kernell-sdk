@@ -122,7 +122,7 @@ class SimulationState:
         if event.epoch < current["epoch"] and event.type not in ("FREEZE", "COMPENSATE"):
             raise Exception(f"Epoch regression {event.epoch} < {current['epoch']}")
 
-        if not current["started"] and event.type not in ("START", "FORCE_SYNC"):
+        if not current["started"] and event.type not in ("START", "FORCE_SYNC", "FAILOVER"):
             raise Exception(f"Execution without START for {rid}: {event.type}")
 
         if event.type == "RECLAIM" and current["state"] != "IN_PROGRESS":
@@ -156,6 +156,10 @@ class SimulationState:
         elif event.type == "FREEZE":
             current["state"] = "FROZEN"
             current["epoch"] = max(current["epoch"], event.epoch)
+            
+        elif event.type == "FAILOVER":
+            current["epoch"] = event.epoch
+            # FAILOVER transfers leadership but doesn't change the underlying execution state
             
         elif event.type == "FORCE_SYNC":
             current["started"] = True

@@ -43,6 +43,8 @@ class NotLeaderRegionError(Exception):
     pass
 
 
+from kernell_sdk.router.lease_manager import LeaseManager
+
 class WALReplicator:
     """Runs on the SOURCE region. Forwards local WAL events to the replication stream."""
     
@@ -51,6 +53,7 @@ class WALReplicator:
     def __init__(self, redis_local, region: str):
         self.local = redis_local
         self.region = region
+        self.lease_manager = LeaseManager(redis_local, region)
 
     def publish_event(self, event: dict) -> str:
         """Publish a local WAL event to the replication stream."""
@@ -64,13 +67,9 @@ class WALReplicator:
         
         return self.local.xadd(self.STREAM_KEY, payload)
 
-    def enforce_leader(self, request_id: str):
-        """CRITICAL: Called before ANY write. Raises exception if not home region."""
-        home = get_home_region(request_id)
-        if self.region != home:
-            raise NotLeaderRegionError(
-                f"Region {self.region} is not the leader for {request_id}. Home is {home}."
-            )
+    def enforce_write(self, request_id: str, epoch: int):
+        """CRITICAL: Called before ANY write. Raises exception if not leased."""
+        self.lease_manager.validate_write(request_id, epoch)
 
 
 class ReplicationConsumer:

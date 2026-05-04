@@ -350,6 +350,46 @@ def harden_durability():
     return durability_manager.harden()
 
 
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Failover & Leasing API
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+from kernell_sdk.router.lease_manager import LeaseManager
+import time
+
+REGION = os.getenv("KERNELL_REGION", "A")
+lease_manager = LeaseManager(redis_client, REGION) if redis_client else None
+
+@app.post("/system/failover/{request_id}")
+def force_failover(request_id: str, ttl: float = 300.0):
+    if not lease_manager:
+        raise HTTPException(status_code=500, detail="Lease Manager not available")
+    
+    current = lease_manager.get(request_id)
+    old_holder = current["holder"] if current else "UNKNOWN"
+    
+    new_lease = lease_manager.takeover(request_id, ttl=ttl)
+    
+    # Append the FAILOVER event to the WAL
+    if redis_client:
+        event = {
+            "type": "FAILOVER",
+            "request_id": request_id,
+            "epoch": new_lease["epoch"],
+            "from": old_holder,
+            "to": REGION,
+            "ts": time.time()
+        }
+        redis_client.xadd("kernell:wal", event)
+
+    return {
+        "status": "takeover_complete",
+        "request_id": request_id,
+        "new_epoch": new_lease["epoch"],
+        "holder": new_lease["holder"]
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
