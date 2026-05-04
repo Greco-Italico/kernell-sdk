@@ -19,17 +19,6 @@ Core guarantees:
   • Atomic WATCH/MULTI/EXEC on all balance mutations
   • Merkle tree batch anchoring with prefix protection
 """
-import os as _os
-
-# ── Supply Chain Protection ───────────────────────────────────────────────────
-# Verify the pre-compiled Rust extension before loading any financial logic.
-# Set KERNELL_SKIP_BINARY_VERIFY=1 ONLY in controlled CI environments where
-# the binary is freshly built from source.
-if _os.environ.get("KERNELL_SKIP_BINARY_VERIFY") != "1":
-    from kap_escrow.verify_binary import verify_or_raise as _verify_or_raise
-    _verify_or_raise()
-# ─────────────────────────────────────────────────────────────────────────────
-
 from kap_escrow.engine import EscrowEngine
 from kap_escrow.merkle import MerkleTree, build_tx_merkle
 from kap_escrow.signing import sign_tx, verify_tx

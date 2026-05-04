@@ -1,104 +1,41 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
 [project]
-name = "kernell-os-sdk"
-version = "3.2.2"
-description = "First public release of an agentic runtime for M2M coordination. Machines coordinate, verify, and settle value autonomously."
+name = "kap-escrow"
+version = "1.1.0"
+description = "KAP — Trustless escrow extension for the A2A protocol stack. The missing financial protection layer between AP2 (authorization) and x402 (settlement)."
 readme = "README.md"
+license = {text = "MIT"}
 requires-python = ">=3.9"
-license = { text = "MIT" }
 authors = [
-    { name = "Kernell OS", email = "dev@kernell.site" }
+    {name = "Kernell", email = "protocol@kernell.site"}
 ]
-keywords = ["agents", "ai", "autonomous", "m2m", "commerce", "llm", "orchestration", "kernell"]
+keywords = [
+    "ai", "agents", "escrow", "a2a", "ap2", "merkle", "protocol",
+    "blockchain", "transactions", "trustless", "agent-to-agent",
+]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Security :: Cryptography",
     "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Office/Business :: Financial",
 ]
 dependencies = [
-    "redis>=5.0,<6",
-    "pydantic>=2.7,<3",
-    "httpx>=0.27,<1",
-    "psutil>=5.9,<7",
-    "cryptography>=42.0,<44",
-    "tenacity>=8.2,<10",
-    "structlog>=24.0,<26",
-    "prometheus_client>=0.20,<1",
-    "fastapi>=0.100.0",
-    "uvicorn>=0.25.0",
-]
-
-[project.optional-dependencies]
-memory = ["redis>=5.0"]
-llm = ["openai>=1.0", "anthropic>=0.25"]
-cluster = ["redis>=5.0", "httpx>=0.25.0"]
-sandbox = ["docker>=7.0"]
-gui = ["fastapi>=0.100.0", "uvicorn>=0.25.0", "cryptography>=41.0.0"]
-all = [
-    "redis>=5.0",
-    "openai>=1.0",
-    "anthropic>=0.25",
-    "docker>=7.0",
-    "fastapi>=0.100.0",
-    "uvicorn>=0.25.0",
-    "cryptography>=41.0.0"
-]
-test = [
-    "pytest>=8.0.0",
-    "pytest-asyncio>=0.23.0",
-    "pytest-mock>=3.12.0",
-    "pytest-cov>=4.1.0",
-    "hypothesis>=6.0.0",
-    "freezegun>=1.4.0",
-    "responses>=0.25.0",
-    "httpx>=0.27.0",
-    "fakeredis[lua]>=2.20.0",
-    "coverage>=7.4.0",
-    "prometheus_client>=0.20.0"
+    "redis>=4.0.0",
+    "pynacl>=1.5.0",
 ]
 
 [project.urls]
 Homepage = "https://kernell.site"
-Repository = "https://github.com/Greco-Italico/kernell-os-sdk"
-Documentation = "https://kernell.site/docs/sdk"
+Repository = "https://github.com/Greco-Italico/kernell-sdk"
+Documentation = "https://kernell.site/nexus"
+"Bug Tracker" = "https://github.com/Greco-Italico/kernell-sdk/issues"
 
-[project.scripts]
-kernell = "kernell_os_sdk.cli.__main__:main"
-
-[tool.hatch.build.targets.wheel]
-packages = ["kernell_os_sdk", "kap_escrow"]
-
-[tool.hatch.build.targets.sdist]
-exclude = [".venv*", "dist", "build", "*.egg-info", ".git"]
-
-# Agregar a pyproject.toml
-
-[tool.bandit]
-exclude_dirs = ["tests", "dist", "build"]
-skips = []   # No skipear ninguna regla — revisión completa
-
-# Reglas críticas para este proyecto:
-# B105 — hardcoded passwords
-# B106 — hardcoded password in function argument
-# B108 — probable insecure use of temp file
-# B301 — pickle usage (deserialización insegura)
-# B311 — random (uso de random no seguro en contexto crypto)
-# B501-B506 — TLS/SSL issues
-# B601-B608 — shell injection
-
-[tool.pytest.ini_options]
-markers = [
-    "slow: long-running security fuzz/property tests",
-    "invariant(id): invariant identifier mapping (E*, L*, S*, T*)",
-]
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "kap_escrow.kap_core"
+python-source = "."
